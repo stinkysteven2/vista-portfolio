@@ -23,6 +23,19 @@ Na het voltooien van deze module ben ik in staat om:
 |---|---|
 | _(wordt aangevuld)_ | _(wordt aangevuld naarmate de module vordert)_ |
 
+## Opdrachten
+
+- [ ] Deelopdracht 1 — Eerste test van de IT Showcase
+- [ ] Deelopdracht 2 — Software Requirement Specification
+- [ ] Deelopdracht 3 — Functioneel en niet-functioneel testen
+- [ ] Deelopdracht 4 — AI en testcases
+- [ ] Deelopdracht 5 — Scope van het testen
+- [ ] Deelopdracht 6 — Testplan
+- [ ] Deelopdracht 7 — Testrapportage
+- [ ] Deelopdracht 8 — Verbetervoorstellen
+- [ ] Deelopdracht 9 — Prioritiseren verbetervoorstellen
+- [ ] Deelopdracht 10 — Communicatie verbetervoorstellen
+
 ## Gebruikte tools & technieken
 
 _(wordt aangevuld naarmate de module vordert)_
