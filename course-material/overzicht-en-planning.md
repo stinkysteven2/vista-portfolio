@@ -13,16 +13,16 @@ Tijdens de workshops wordt telkens gebruik gemaakt van hetzelfde project. Het pr
 
 | Week | Les onderdeel | Opdracht | Cursus |
 |------|---------------|----------|--------|
-| 1 | Kennismaking met elkaar en testen | Eerste test van de IT Showcase | Agile Testing |
-| 2 | Software Requirement Specification (SRS) | Nieuwe user stories bedenken en verwerken in SRS | Applying Agile MoSCoW Prioritization |
-| 3 | Functioneel en niet-functioneel testen | Omschrijf niet-functionele eisen van de nieuwe user stories | Software Testing Foundations: Building a Career in Quality |
-| 4 | AI en Testen / Testscenario's en testcases | Gebruik AI om testcases te maken en beoordeel het resultaat | Software Testing Foundations: Test Planning |
-| 5 | Scope van het testen | Bepaal de scope van het testen voor je project | Software Testing Tools |
-| 6 | Testplan | Maak een volledig testplan voor je project | Software Testing Assistance with GitHub Copilot AI |
-| 7 | Testrapportage | Voer testen uit en maak een testrapport | Performance Testing Fundamentals |
-| 8 | Verbetervoorstellen na het testen | Maak verbetervoorstellen op basis van je testresultaten | Security Testing Essentials Training (Sectie 1, 2) |
-| 9 | Prioritiseren van de verbetervoorstellen | Prioriteer en plan je verbetervoorstellen | Security Testing Essentials Training (Sectie 3, 4) |
-| 10 | Communicatie van de verbetervoorstellen | Geef een presentatie over je testproces en bevindingen | Security Testing Essentials Training (Sectie 5, 6, 7) |
+| 1 | Kennismaking met elkaar en testen | [Eerste test van de IT Showcase](https://lms.vistacollege.nl/courses/3316/assignments/48399) | Agile Testing |
+| 2 | Software Requirement Specification (SRS) | [Nieuwe user stories bedenken en verwerken in SRS](https://lms.vistacollege.nl/courses/3316/assignments/48400) | Applying Agile MoSCoW Prioritization |
+| 3 | Functioneel en niet-functioneel testen | [Omschrijf niet-functionele eisen van de nieuwe user stories](https://lms.vistacollege.nl/courses/3316/assignments/48401) | Software Testing Foundations: Building a Career in Quality |
+| 4 | AI en Testen / Testscenario's en testcases | [Gebruik AI om testcases te maken en beoordeel het resultaat](https://lms.vistacollege.nl/courses/3316/assignments/48402) | Software Testing Foundations: Test Planning |
+| 5 | Scope van het testen | [Bepaal de scope van het testen voor je project](https://lms.vistacollege.nl/courses/3316/assignments/48403) | Software Testing Tools |
+| 6 | Testplan | [Maak een volledig testplan voor je project](https://lms.vistacollege.nl/courses/3316/assignments/48404) | Software Testing Assistance with GitHub Copilot AI |
+| 7 | Testrapportage | [Voer testen uit en maak een testrapport](https://lms.vistacollege.nl/courses/3316/assignments/48405) | Performance Testing Fundamentals |
+| 8 | Verbetervoorstellen na het testen | [Maak verbetervoorstellen op basis van je testresultaten](https://lms.vistacollege.nl/courses/3316/assignments/48406) | Security Testing Essentials Training (Sectie 1, 2) |
+| 9 | Prioritiseren van de verbetervoorstellen | [Prioriteer en plan je verbetervoorstellen](https://lms.vistacollege.nl/courses/3316/assignments/48407) | Security Testing Essentials Training (Sectie 3, 4) |
+| 10 | Communicatie van de verbetervoorstellen | [Geef een presentatie over je testproces en bevindingen](https://lms.vistacollege.nl/courses/3316/assignments/48398) | Security Testing Essentials Training (Sectie 5, 6, 7) |
 
 ## Instructies voor deze module
 
