@@ -2,9 +2,9 @@
 
 ## Gevonden fouten
 
-> Getest op: [datum]
+> Getest op: 28 februari 2026
 > Geteste applicatie: [IT Talenten Portaal](https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent)
-> Browser: Chromium (via Playwright) + handmatig in [browser]
+> Browser: Chromium (via Playwright) + handmatig in Firefox
 
 | # | Wat ik deed | Wat ik verwachtte | Wat er gebeurde | Waar op de site | Ernst |
 |---|-------------|-------------------|-----------------|-----------------|-------|
