@@ -29,11 +29,11 @@ Na het voltooien van deze module ben ik in staat om:
 
 ## Opdrachten
 
-- [ ] Deelopdracht 1 — Eerste test van de IT Showcase
-- [ ] Deelopdracht 2 — Software Requirement Specification
-- [ ] Deelopdracht 3 — Functioneel en niet-functioneel testen
-- [ ] Deelopdracht 4 — AI en testcases
-- [ ] Deelopdracht 5 — Scope van het testen
+- [x] Deelopdracht 1 — Eerste test van de IT Showcase
+- [x] Deelopdracht 2 — Software Requirement Specification
+- [x] Deelopdracht 3 — Functioneel en niet-functioneel testen
+- [x] Deelopdracht 4 — AI en testcases
+- [x] Deelopdracht 5 — Scope van het testen
 - [ ] Deelopdracht 6 — Testplan
 - [ ] Deelopdracht 7 — Testrapportage
 - [ ] Deelopdracht 8 — Verbetervoorstellen
