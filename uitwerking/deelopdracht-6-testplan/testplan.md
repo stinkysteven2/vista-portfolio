@@ -11,8 +11,6 @@
 
 Dit testplan beschrijft hoe we het IT Talenten Portaal gaan testen. Het helpt om er zeker van te zijn dat de applicatie goed werkt en voldoet aan de eisen uit het SRS.
 
-Het testplan is een werkinstructie: ongeacht wie de testen uitvoert, zouden de bevindingen zo veel mogelijk hetzelfde moeten zijn.
-
 ---
 
 ## 2. Wat wordt getest
