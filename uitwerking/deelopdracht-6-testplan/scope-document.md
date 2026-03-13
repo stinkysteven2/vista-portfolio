@@ -29,6 +29,7 @@
 | **White-label thema's voor detacheringspartijen** | Er worden (nog) geen thema's ontwikkeld voor partijen die de applicatie als white-label oplossing willen gebruiken. |
 | **Automatische koppeling met UWV-systemen** | Buiten de huidige scope. Integratie met externe overheidssystemen vereist aparte afspraken en infrastructuur. |
 | **Geolocatie-afstandsfilters** | Er worden geen geolocatiefilters ontwikkeld binnen het zoekprofiel van gebruikers. |
+| **Vaardigheden & Eigenschappen (talentprofiel)** | De huidige implementatie oogt onafgemaakt en de verwachting is dat dit onderdeel inhoudelijk nog gaat veranderen. Inhoudelijk testen is zonde van de tijd. De bevindingen worden wel vermeld in het testrapport. |
 
 ---
 
