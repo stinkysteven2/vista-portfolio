@@ -19,26 +19,26 @@ Op basis van het SRS en het scope document worden de volgende eisen getest:
 
 | Eis | Omschrijving | Reden |
 |---|---|---|
-| FE1 | Inloggen (alle gevallen) | Kernfunctionaliteit, goed testbaar |
-| FE2 | Uitloggen + sessiebeëindiging | Veiligheid |
-| FE3 | Autorisatie per rol | AVG, veiligheid |
-| FE4 | Filteren op provincie en beschikbaarheid | Kernfunctionaliteit, twee verschillende interactiemechanismen |
-| FE5 | Talentprofiel bekijken | Kernfunctionaliteit |
-| FE11 | Talentenbeheer (admin) | Kernfunctionaliteit admin |
-| NFE1/NFE3 | IDOR-test: talentprofiel zonder login | AVG, veiligheid |
+| [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen (alle gevallen) | Kernfunctionaliteit, goed testbaar |
+| [FE2](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Uitloggen + sessiebeëindiging | Veiligheid |
+| [FE3](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Autorisatie per rol | AVG, veiligheid |
+| [FE4](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op provincie en beschikbaarheid | Kernfunctionaliteit, twee verschillende interactiemechanismen |
+| [FE5](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel bekijken | Kernfunctionaliteit |
+| [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talentenbeheer (admin) | Kernfunctionaliteit admin |
+| [NFE1/NFE3](uitgangspunten/software-requirement-specification.md#51-veiligheid) | IDOR-test: talentprofiel zonder login | AVG, veiligheid |
 
 **Niet getest:**
 
 | Eis | Reden |
 |---|---|
-| FE6 — Favorieten | Lage prioriteit, geen leerwaarde |
-| FE7/FE8 — Vacatures | Geen business prioriteit |
-| FE9.1 — Talentregistratie | Functionaliteit niet aanwezig in de applicatie |
-| FE9.2 — Beheerder melding binnen 24 uur | Extern proces, niet te testen |
-| FE10 — Gebruikersbeheer | Buiten scope van deze testronde |
-| FE12/FE13 — Organisaties, bedrijven, vacaturesbeheer | Buiten scope van deze testronde |
+| [FE6](uitgangspunten/software-requirement-specification.md#43-favorieten) — Favorieten | Lage prioriteit, geen leerwaarde |
+| [FE7/FE8](uitgangspunten/software-requirement-specification.md#44-vacatures) — Vacatures | Geen business prioriteit |
+| [FE9.1](uitgangspunten/software-requirement-specification.md#45-talentregistratie) — Talentregistratie | Functionaliteit niet aanwezig in de applicatie |
+| [FE9.2](uitgangspunten/software-requirement-specification.md#45-talentregistratie) — Beheerder melding binnen 24 uur | Extern proces, niet te testen |
+| [FE10](uitgangspunten/software-requirement-specification.md#46-admin-panel) — Gebruikersbeheer | Buiten scope van deze testronde |
+| [FE12/FE13](uitgangspunten/software-requirement-specification.md#46-admin-panel) — Organisaties, bedrijven, vacaturesbeheer | Buiten scope van deze testronde |
 | Vaardigheden & Eigenschappen (talentprofiel) | Oogt onafgemaakt; verwachting is dat dit onderdeel nog gaat veranderen. Bevindingen worden wel opgenomen in het testrapport. |
-| FE14 — Property labels beheren | Buiten scope van deze testronde |
+| [FE14](uitgangspunten/software-requirement-specification.md#46-admin-panel) — Property labels beheren | Buiten scope van deze testronde |
 | Bekende bugs (B1-B5) | Al gedocumenteerd in deelopdracht 1 |
 
 ---
@@ -60,7 +60,7 @@ Testen worden uitgevoerd per gebruikersrol, van minste naar meeste rechten:
 3. **Admin** — talentenbeheer
 4. **Talent** — *(vervalt: registratiefunctionaliteit niet aanwezig)*
 
-De reden voor deze volgorde: elke rol bouwt voort op de vorige. Bovendien vereist de talent-rol een door de admin goedgekeurd account, dus de admin moet eerst werken.
+De reden voor deze volgorde: elke rol bouwt voort op de vorige.
 
 ### 3.3 Overlap tussen testcases
 
@@ -72,30 +72,30 @@ De gedetailleerde testcases staan in `testcases.md` (in deze map). Elke testcase
 
 | TC | Eis | Omschrijving | Prioriteit |
 |---|---|---|---|
-| [TC-001](testcases.md#tc-001-inloggen-met-geldige-gegevens) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met geldige gegevens | Hoog |
-| [TC-002](testcases.md#tc-002-inloggen-met-onjuist-wachtwoord) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met onjuist wachtwoord | Hoog |
-| [TC-003](testcases.md#tc-003-inloggen-met-onbekend-e-mailadres) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met onbekend e-mailadres | Gemiddeld |
-| [TC-004](testcases.md#tc-004-uitloggen) | [FE2](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Uitloggen | Hoog |
-| [TC-005](testcases.md#tc-005-sessie-beëindigd-na-uitloggen) | [FE2](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Sessie beëindigd na uitloggen | Hoog |
-| [TC-006](testcases.md#tc-006-talentprofiel-afgeschermd-voor-bezoekers) | [FE3](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Talentprofiel afgeschermd voor bezoekers | Hoog |
-| [TC-007](testcases.md#tc-007-admin-panel-toegankelijkheid-per-rol) | [FE3](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Admin panel toegankelijkheid per rol | Hoog |
-| [TC-008](testcases.md#tc-008-filteren-op-provincie) | [FE4](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op provincie | Hoog |
-| [TC-009](testcases.md#tc-009-filteren-op-beschikbaarheid-grenswaarden) | [FE4](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op beschikbaarheid (grenswaarden) | Hoog |
-| [TC-010](testcases.md#tc-010-talentprofiel-volledig-zichtbaar-voor-ingelogde-gebruiker) | [FE5](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | Hoog |
-| [TC-011](testcases.md#tc-011-talentprofiel-gedeeltelijk-zichtbaar-voor-bezoeker) | [FE5](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | Hoog |
-| [TC-012](testcases.md#tc-012-idor--talentprofiel-via-url-manipulatie) | [NFE1/NFE3](uitgangspunten/software-requirement-specification.md#51-veiligheid) | IDOR — talentprofiel via URL-manipulatie | Hoog |
-| [TC-013](testcases.md#tc-013-talent-aanmaken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent aanmaken | Hoog |
-| [TC-014](testcases.md#tc-014-talent-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent bewerken | Hoog |
-| [TC-015](testcases.md#tc-015-talent-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent verwijderen | Hoog |
-| [TC-016](testcases.md#tc-016-werkervaring-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring toevoegen | Gemiddeld |
-| [TC-017](testcases.md#tc-017-werkervaring-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring bewerken | Gemiddeld |
-| [TC-018](testcases.md#tc-018-werkervaring-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring verwijderen | Gemiddeld |
-| [TC-019](testcases.md#tc-019-opleiding-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding toevoegen | Gemiddeld |
-| [TC-020](testcases.md#tc-020-opleiding-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding bewerken | Gemiddeld |
-| [TC-021](testcases.md#tc-021-opleiding-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding verwijderen | Gemiddeld |
-| [TC-022](testcases.md#tc-022-hobbyinteresse-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse toevoegen | Laag |
-| [TC-023](testcases.md#tc-023-hobbyinteresse-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse verwijderen | Laag |
-| [TC-024](testcases.md#tc-024-hobbyinteresse-sorteren) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse sorteren | Laag |
+| [TC-001](testcases.md#tc-001-inloggen-met-geldige-gegevens) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met geldige gegevens | 🔴 Hoog |
+| [TC-002](testcases.md#tc-002-inloggen-met-onjuist-wachtwoord) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met onjuist wachtwoord | 🔴 Hoog |
+| [TC-003](testcases.md#tc-003-inloggen-met-onbekend-e-mailadres) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met onbekend e-mailadres | 🟡 Gemiddeld |
+| [TC-004](testcases.md#tc-004-uitloggen) | [FE2](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Uitloggen | 🔴 Hoog |
+| [TC-005](testcases.md#tc-005-sessie-beëindigd-na-uitloggen) | [FE2](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Sessie beëindigd na uitloggen | 🔴 Hoog |
+| [TC-006](testcases.md#tc-006-talentprofiel-afgeschermd-voor-bezoekers) | [FE3](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Talentprofiel afgeschermd voor bezoekers | 🔴 Hoog |
+| [TC-007](testcases.md#tc-007-admin-panel-toegankelijkheid-per-rol) | [FE3](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Admin panel toegankelijkheid per rol | 🔴 Hoog |
+| [TC-008](testcases.md#tc-008-filteren-op-provincie) | [FE4](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op provincie | 🔴 Hoog |
+| [TC-009](testcases.md#tc-009-filteren-op-beschikbaarheid-grenswaarden) | [FE4](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op beschikbaarheid (grenswaarden) | 🔴 Hoog |
+| [TC-010](testcases.md#tc-010-talentprofiel-volledig-zichtbaar-voor-ingelogde-gebruiker) | [FE5](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | 🔴 Hoog |
+| [TC-011](testcases.md#tc-011-talentprofiel-gedeeltelijk-zichtbaar-voor-bezoeker) | [FE5](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | 🔴 Hoog |
+| [TC-012](testcases.md#tc-012-idor--talentprofiel-via-url-manipulatie) | [NFE1/NFE3](uitgangspunten/software-requirement-specification.md#51-veiligheid) | IDOR — talentprofiel via URL-manipulatie | 🔴 Hoog |
+| [TC-013](testcases.md#tc-013-talent-aanmaken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent aanmaken | 🔴 Hoog |
+| [TC-014](testcases.md#tc-014-talent-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent bewerken | 🔴 Hoog |
+| [TC-015](testcases.md#tc-015-talent-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent verwijderen | 🔴 Hoog |
+| [TC-016](testcases.md#tc-016-werkervaring-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring toevoegen | 🟡 Gemiddeld |
+| [TC-017](testcases.md#tc-017-werkervaring-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring bewerken | 🟡 Gemiddeld |
+| [TC-018](testcases.md#tc-018-werkervaring-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring verwijderen | 🟡 Gemiddeld |
+| [TC-019](testcases.md#tc-019-opleiding-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding toevoegen | 🟡 Gemiddeld |
+| [TC-020](testcases.md#tc-020-opleiding-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding bewerken | 🟡 Gemiddeld |
+| [TC-021](testcases.md#tc-021-opleiding-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding verwijderen | 🟡 Gemiddeld |
+| [TC-022](testcases.md#tc-022-hobbyinteresse-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse toevoegen | 🟢 Laag |
+| [TC-023](testcases.md#tc-023-hobbyinteresse-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse verwijderen | 🟢 Laag |
+| [TC-024](testcases.md#tc-024-hobbyinteresse-sorteren) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse sorteren | 🟢 Laag |
 
 ---
 
@@ -151,7 +151,6 @@ De testuitvoering voor deelopdracht 6 is gepland in de week van **16 maart**. De
 | Risico | Kans | Impact | Oplossing |
 |---|---|---|---|
 | Testomgeving niet beschikbaar | Laag | Hoog | Opnieuw proberen na 24 uur; contact opnemen met beheerder |
-| Geen inloggegevens voor talent-rol | Gemiddeld | Gemiddeld | Admin maakt testaccount aan vóór testfase 4 |
 | Keycloak sessie verloopt tijdens testen | Gemiddeld | Laag | Opnieuw inloggen; Playwright script houdt rekening met re-authenticatie |
 | Testdata wordt overschreven door andere testers | Laag | Gemiddeld | Aparte testaccounts gebruiken; naamconventie hanteren (bijv. `test-talent-steven`) |
 | Applicatie bevat bekende bugs die testuitvoering blokkeren | Gemiddeld | Gemiddeld | Bevinding documenteren, test markeren als geblokkeerd, doorgaan met volgende testcase |
