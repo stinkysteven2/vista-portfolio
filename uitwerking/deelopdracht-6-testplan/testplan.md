@@ -101,14 +101,16 @@ De gedetailleerde testcases staan in `testcases.md` (in deze map). Elke testcase
 
 ## 4. Planning
 
-De exacte deadline voor deelopdracht 6 is nog niet bekend. De planning wordt ingevuld zodra deze beschikbaar is. De testvolgorde staat vast (zie sectie 3.2).
+Het examenmoment is vastgesteld op **8 mei 2026**. Om voldoende ruimte te houden voor eventuele herwerk en afsluiting van het portfolio, is de persoonlijke deadline gesteld op **24 april 2026** — twee weken vóór het examen.
 
-| Fase | Inhoud |
-|---|---|
-| Fase 1 | Bezoeker: filters en IDOR |
-| Fase 2 | Ingelogde gebruiker: talentprofiel, uitloggen |
-| Fase 3 | Admin: talentenbeheer, property labels |
-| Fase 4 | *(vervalt)* |
+De testuitvoering voor deelopdracht 6 is gepland in de week van **16 maart**. De drie testfasen volgen elkaar op in volgorde van gebruikersrol (zie sectie 3.2) en zijn naar verwachting binnen één week afrondbaar.
+
+| Fase | Inhoud | Streefdatum |
+|---|---|---|
+| Fase 1 | Bezoeker: filters en IDOR | 16 maart 2026 |
+| Fase 2 | Ingelogde gebruiker: talentprofiel, uitloggen | 18 maart 2026 |
+| Fase 3 | Admin: talentenbeheer, property labels | 20 maart 2026 |
+| Fase 4 | *(vervalt)* | — |
 
 ---
 
