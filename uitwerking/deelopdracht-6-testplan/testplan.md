@@ -110,7 +110,6 @@ De testuitvoering voor deelopdracht 6 is gepland in de week van **16 maart**. De
 | Fase 1 | Bezoeker: filters en IDOR | 16 maart 2026 |
 | Fase 2 | Ingelogde gebruiker: talentprofiel, uitloggen | 18 maart 2026 |
 | Fase 3 | Admin: talentenbeheer, property labels | 20 maart 2026 |
-| Fase 4 | *(vervalt)* | — |
 
 ---
 
