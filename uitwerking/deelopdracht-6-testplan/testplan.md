@@ -26,7 +26,6 @@ Op basis van het SRS en het scope document worden de volgende eisen getest:
 | FE3 | Autorisatie per rol | AVG, veiligheid |
 | FE4 | Filteren op provincie en beschikbaarheid | Kernfunctionaliteit, twee verschillende interactiemechanismen |
 | FE5 | Talentprofiel bekijken | Kernfunctionaliteit |
-| FE9.1 | Talentregistratie | Instroom van nieuwe talenten |
 | FE11 | Talentenbeheer (admin) | Kernfunctionaliteit admin |
 | FE14 | Property labels beheren (admin) | Beheerfunctionaliteit |
 | NFE1/NFE3 | IDOR-test: talentprofiel zonder login | AVG, veiligheid |
@@ -37,6 +36,7 @@ Op basis van het SRS en het scope document worden de volgende eisen getest:
 |---|---|
 | FE6 — Favorieten | Lage prioriteit, geen leerwaarde |
 | FE7/FE8 — Vacatures | Geen business prioriteit |
+| FE9.1 — Talentregistratie | Functionaliteit niet aanwezig in de applicatie |
 | FE9.2 — Beheerder melding binnen 24 uur | Extern proces, niet te testen |
 | FE10 — Gebruikersbeheer | Buiten scope van deze testronde |
 | FE12/FE13 — Organisaties, bedrijven, vacaturesbeheer | Buiten scope van deze testronde |
@@ -60,7 +60,7 @@ Testen worden uitgevoerd per gebruikersrol, van minste naar meeste rechten:
 1. **Bezoeker** (niet ingelogd) — filters, publieke pagina's, IDOR-test
 2. **Ingelogde gebruiker** — talentprofiel, uitloggen, sessiebeëindiging
 3. **Admin** — talentenbeheer, property labels
-4. **Talent** — registratieflow
+4. **Talent** — *(vervalt: registratiefunctionaliteit niet aanwezig)*
 
 De reden voor deze volgorde: elke rol bouwt voort op de vorige. Bovendien vereist de talent-rol een door de admin goedgekeurd account, dus de admin moet eerst werken.
 
@@ -83,7 +83,7 @@ De exacte deadline voor deelopdracht 6 is nog niet bekend. De planning wordt ing
 | Fase 1 | Bezoeker: filters en IDOR |
 | Fase 2 | Ingelogde gebruiker: talentprofiel, uitloggen |
 | Fase 3 | Admin: talentenbeheer, property labels |
-| Fase 4 | Talent: registratie |
+| Fase 4 | *(vervalt)* |
 
 ---
 
@@ -104,8 +104,6 @@ De exacte deadline voor deelopdracht 6 is nog niet bekend. De planning wordt ing
 | Admin account | `admin` / `[REDACTED]` | Beschikbaar |
 | Talent account | nader te bepalen | Aan te maken door admin vóór testuitvoering |
 | Bestaand talentprofiel-ID | nader te bepalen | Op te zoeken via talentenoverzicht |
-| Registratiegegevens (geldig) | naam, e-mail, wachtwoord | Aan te maken tijdens test |
-| Registratiegegevens (ongeldig) | leeg formulier, ongeldig e-mailformaat | Tijdens test in te vullen |
 
 ### 5.3 Tools
 
