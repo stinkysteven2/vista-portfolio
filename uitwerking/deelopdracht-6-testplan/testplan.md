@@ -25,7 +25,6 @@ Op basis van het SRS en het scope document worden de volgende eisen getest:
 | FE4 | Filteren op provincie en beschikbaarheid | Kernfunctionaliteit, twee verschillende interactiemechanismen |
 | FE5 | Talentprofiel bekijken | Kernfunctionaliteit |
 | FE11 | Talentenbeheer (admin) | Kernfunctionaliteit admin |
-| FE14 | Property labels beheren (admin) | Beheerfunctionaliteit |
 | NFE1/NFE3 | IDOR-test: talentprofiel zonder login | AVG, veiligheid |
 
 **Niet getest:**
@@ -39,6 +38,7 @@ Op basis van het SRS en het scope document worden de volgende eisen getest:
 | FE10 — Gebruikersbeheer | Buiten scope van deze testronde |
 | FE12/FE13 — Organisaties, bedrijven, vacaturesbeheer | Buiten scope van deze testronde |
 | Vaardigheden & Eigenschappen (talentprofiel) | Oogt onafgemaakt; verwachting is dat dit onderdeel nog gaat veranderen. Bevindingen worden wel opgenomen in het testrapport. |
+| FE14 — Property labels beheren | Buiten scope van deze testronde |
 | Bekende bugs (B1-B5) | Al gedocumenteerd in deelopdracht 1 |
 
 ---
@@ -57,7 +57,7 @@ Testen worden uitgevoerd per gebruikersrol, van minste naar meeste rechten:
 
 1. **Bezoeker** (niet ingelogd) — filters, publieke pagina's, IDOR-test
 2. **Ingelogde gebruiker** — talentprofiel, uitloggen, sessiebeëindiging
-3. **Admin** — talentenbeheer, property labels
+3. **Admin** — talentenbeheer
 4. **Talent** — *(vervalt: registratiefunctionaliteit niet aanwezig)*
 
 De reden voor deze volgorde: elke rol bouwt voort op de vorige. Bovendien vereist de talent-rol een door de admin goedgekeurd account, dus de admin moet eerst werken.
@@ -109,7 +109,7 @@ De testuitvoering voor deelopdracht 6 is gepland in de week van **16 maart**. De
 |---|---|---|
 | Fase 1 | Bezoeker: filters en IDOR | 16 maart 2026 |
 | Fase 2 | Ingelogde gebruiker: talentprofiel, uitloggen | 18 maart 2026 |
-| Fase 3 | Admin: talentenbeheer, property labels | 20 maart 2026 |
+| Fase 3 | Admin: talentenbeheer | 20 maart 2026 |
 
 ---
 
