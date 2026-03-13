@@ -3,7 +3,7 @@
 > Auteur: Steven
 > Datum: maart 2026
 > Applicatie: [IT Talenten Portaal](https://talenten-portaal-tp-test-webapp.iapmkw.easypanel.host)
-> Gebaseerd op: `software-requirement-specification.md` (in deze map)
+> Gebaseerd op: `uitgangspunten/software-requirement-specification.md` (in deze map)
 
 ---
 
@@ -72,30 +72,30 @@ De gedetailleerde testcases staan in `testcases.md` (in deze map). Elke testcase
 
 | TC | Eis | Omschrijving | Prioriteit |
 |---|---|---|---|
-| [TC-001](testcases.md#tc-001-inloggen-met-geldige-gegevens) | [FE1](software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met geldige gegevens | Hoog |
-| [TC-002](testcases.md#tc-002-inloggen-met-onjuist-wachtwoord) | [FE1](software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met onjuist wachtwoord | Hoog |
-| [TC-003](testcases.md#tc-003-inloggen-met-onbekend-e-mailadres) | [FE1](software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met onbekend e-mailadres | Gemiddeld |
-| [TC-004](testcases.md#tc-004-uitloggen) | [FE2](software-requirement-specification.md#41-authenticatie-en-autorisatie) | Uitloggen | Hoog |
-| [TC-005](testcases.md#tc-005-sessie-beëindigd-na-uitloggen) | [FE2](software-requirement-specification.md#41-authenticatie-en-autorisatie) | Sessie beëindigd na uitloggen | Hoog |
-| [TC-006](testcases.md#tc-006-talentprofiel-afgeschermd-voor-bezoekers) | [FE3](software-requirement-specification.md#41-authenticatie-en-autorisatie) | Talentprofiel afgeschermd voor bezoekers | Hoog |
-| [TC-007](testcases.md#tc-007-admin-panel-toegankelijkheid-per-rol) | [FE3](software-requirement-specification.md#41-authenticatie-en-autorisatie) | Admin panel toegankelijkheid per rol | Hoog |
-| [TC-008](testcases.md#tc-008-filteren-op-provincie) | [FE4](software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op provincie | Hoog |
-| [TC-009](testcases.md#tc-009-filteren-op-beschikbaarheid-grenswaarden) | [FE4](software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op beschikbaarheid (grenswaarden) | Hoog |
-| [TC-010](testcases.md#tc-010-talentprofiel-volledig-zichtbaar-voor-ingelogde-gebruiker) | [FE5](software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | Hoog |
-| [TC-011](testcases.md#tc-011-talentprofiel-gedeeltelijk-zichtbaar-voor-bezoeker) | [FE5](software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | Hoog |
-| [TC-012](testcases.md#tc-012-idor--talentprofiel-via-url-manipulatie) | [NFE1/NFE3](software-requirement-specification.md#51-veiligheid) | IDOR — talentprofiel via URL-manipulatie | Hoog |
-| [TC-013](testcases.md#tc-013-talent-aanmaken) | [FE11](software-requirement-specification.md#46-admin-panel) | Talent aanmaken | Hoog |
-| [TC-014](testcases.md#tc-014-talent-bewerken) | [FE11](software-requirement-specification.md#46-admin-panel) | Talent bewerken | Hoog |
-| [TC-015](testcases.md#tc-015-talent-verwijderen) | [FE11](software-requirement-specification.md#46-admin-panel) | Talent verwijderen | Hoog |
-| [TC-016](testcases.md#tc-016-werkervaring-toevoegen) | [FE11](software-requirement-specification.md#46-admin-panel) | Werkervaring toevoegen | Gemiddeld |
-| [TC-017](testcases.md#tc-017-werkervaring-bewerken) | [FE11](software-requirement-specification.md#46-admin-panel) | Werkervaring bewerken | Gemiddeld |
-| [TC-018](testcases.md#tc-018-werkervaring-verwijderen) | [FE11](software-requirement-specification.md#46-admin-panel) | Werkervaring verwijderen | Gemiddeld |
-| [TC-019](testcases.md#tc-019-opleiding-toevoegen) | [FE11](software-requirement-specification.md#46-admin-panel) | Opleiding toevoegen | Gemiddeld |
-| [TC-020](testcases.md#tc-020-opleiding-bewerken) | [FE11](software-requirement-specification.md#46-admin-panel) | Opleiding bewerken | Gemiddeld |
-| [TC-021](testcases.md#tc-021-opleiding-verwijderen) | [FE11](software-requirement-specification.md#46-admin-panel) | Opleiding verwijderen | Gemiddeld |
-| [TC-022](testcases.md#tc-022-hobbyinteresse-toevoegen) | [FE11](software-requirement-specification.md#46-admin-panel) | Hobby/interesse toevoegen | Laag |
-| [TC-023](testcases.md#tc-023-hobbyinteresse-verwijderen) | [FE11](software-requirement-specification.md#46-admin-panel) | Hobby/interesse verwijderen | Laag |
-| [TC-024](testcases.md#tc-024-hobbyinteresse-sorteren) | [FE11](software-requirement-specification.md#46-admin-panel) | Hobby/interesse sorteren | Laag |
+| [TC-001](testcases.md#tc-001-inloggen-met-geldige-gegevens) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met geldige gegevens | Hoog |
+| [TC-002](testcases.md#tc-002-inloggen-met-onjuist-wachtwoord) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met onjuist wachtwoord | Hoog |
+| [TC-003](testcases.md#tc-003-inloggen-met-onbekend-e-mailadres) | [FE1](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Inloggen met onbekend e-mailadres | Gemiddeld |
+| [TC-004](testcases.md#tc-004-uitloggen) | [FE2](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Uitloggen | Hoog |
+| [TC-005](testcases.md#tc-005-sessie-beëindigd-na-uitloggen) | [FE2](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Sessie beëindigd na uitloggen | Hoog |
+| [TC-006](testcases.md#tc-006-talentprofiel-afgeschermd-voor-bezoekers) | [FE3](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Talentprofiel afgeschermd voor bezoekers | Hoog |
+| [TC-007](testcases.md#tc-007-admin-panel-toegankelijkheid-per-rol) | [FE3](uitgangspunten/software-requirement-specification.md#41-authenticatie-en-autorisatie) | Admin panel toegankelijkheid per rol | Hoog |
+| [TC-008](testcases.md#tc-008-filteren-op-provincie) | [FE4](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op provincie | Hoog |
+| [TC-009](testcases.md#tc-009-filteren-op-beschikbaarheid-grenswaarden) | [FE4](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Filteren op beschikbaarheid (grenswaarden) | Hoog |
+| [TC-010](testcases.md#tc-010-talentprofiel-volledig-zichtbaar-voor-ingelogde-gebruiker) | [FE5](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | Hoog |
+| [TC-011](testcases.md#tc-011-talentprofiel-gedeeltelijk-zichtbaar-voor-bezoeker) | [FE5](uitgangspunten/software-requirement-specification.md#42-talenten-zoeken-en-filteren) | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | Hoog |
+| [TC-012](testcases.md#tc-012-idor--talentprofiel-via-url-manipulatie) | [NFE1/NFE3](uitgangspunten/software-requirement-specification.md#51-veiligheid) | IDOR — talentprofiel via URL-manipulatie | Hoog |
+| [TC-013](testcases.md#tc-013-talent-aanmaken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent aanmaken | Hoog |
+| [TC-014](testcases.md#tc-014-talent-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent bewerken | Hoog |
+| [TC-015](testcases.md#tc-015-talent-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Talent verwijderen | Hoog |
+| [TC-016](testcases.md#tc-016-werkervaring-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring toevoegen | Gemiddeld |
+| [TC-017](testcases.md#tc-017-werkervaring-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring bewerken | Gemiddeld |
+| [TC-018](testcases.md#tc-018-werkervaring-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Werkervaring verwijderen | Gemiddeld |
+| [TC-019](testcases.md#tc-019-opleiding-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding toevoegen | Gemiddeld |
+| [TC-020](testcases.md#tc-020-opleiding-bewerken) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding bewerken | Gemiddeld |
+| [TC-021](testcases.md#tc-021-opleiding-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Opleiding verwijderen | Gemiddeld |
+| [TC-022](testcases.md#tc-022-hobbyinteresse-toevoegen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse toevoegen | Laag |
+| [TC-023](testcases.md#tc-023-hobbyinteresse-verwijderen) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse verwijderen | Laag |
+| [TC-024](testcases.md#tc-024-hobbyinteresse-sorteren) | [FE11](uitgangspunten/software-requirement-specification.md#46-admin-panel) | Hobby/interesse sorteren | Laag |
 
 ---
 

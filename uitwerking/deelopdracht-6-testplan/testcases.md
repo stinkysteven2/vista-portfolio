@@ -1,6 +1,6 @@
 # Testcases — IT Talenten Portaal
 
-> Gebaseerd op: `software-requirement-specification.md` en `testplan.md`
+> Gebaseerd op: `uitgangspunten/software-requirement-specification.md` en `testplan.md`
 > Format geïnspireerd op: testplan SensorShip (mbogodigital.nl)
 
 ---
