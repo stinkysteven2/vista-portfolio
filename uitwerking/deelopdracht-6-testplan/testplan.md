@@ -64,7 +64,7 @@ De reden voor deze volgorde: elke rol bouwt voort op de vorige. Bovendien vereis
 
 ### 3.3 Overlap tussen testcases
 
-Sommige testcases testen dezelfde pagina of functionaliteit vanuit een andere invalshoek. Dit is bewust — een testcase die autorisatie test vertelt een ander verhaal dan een testcase die profielinhoud test, ook als ze dezelfde URL bezoeken. Overlap wordt niet actief vermeden.
+Sommige testcases testen dezelfde pagina of functionaliteit vanuit een andere invalshoek. Dit is bewust, een testcase die autorisatie test vertelt een ander verhaal dan een testcase die profielinhoud test, ook als ze dezelfde URL bezoeken. Overlap wordt niet actief vermeden.
 
 ### 3.4 Verwijzing naar testcases
 
@@ -101,7 +101,7 @@ De gedetailleerde testcases staan in `testcases.md` (in deze map). Elke testcase
 
 ## 4. Planning
 
-Het examenmoment is vastgesteld op **8 mei 2026**. Om voldoende ruimte te houden voor eventuele herwerk en afsluiting van het portfolio, is de persoonlijke deadline gesteld op **24 april 2026** — twee weken vóór het examen.
+Het examenmoment is vastgesteld op **8 mei 2026**. Om voldoende ruimte te houden voor eventuele herwerk en afsluiting van het portfolio, is de persoonlijke deadline gesteld op **24 april 2026**; twee weken vóór het examen.
 
 De testuitvoering voor deelopdracht 6 is gepland in de week van **16 maart**. De drie testfasen volgen elkaar op in volgorde van gebruikersrol (zie sectie 3.2) en zijn naar verwachting binnen één week afrondbaar.
 
