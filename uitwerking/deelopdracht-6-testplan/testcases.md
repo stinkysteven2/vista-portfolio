@@ -158,235 +158,6 @@
 
 ---
 
-## FE11 — Talentenbeheer (admin)
-
-### TC-012: Talent aanmaken
-
-**Doel:** Verifiëren dat een beheerder een nieuw talent kan aanmaken via het admin panel.
-
-**Stappen:**
-1. Log in als beheerder (zie TC-001)
-2. Navigeer naar `/admin/talenten`
-3. Klik op "Talent toevoegen"
-4. Vul de verplichte velden in met de volgende testdata:
-   - Initialen: `T.`
-   - Voornaam: `Test`
-   - Tussenvoegsel: *(leeg)*
-   - Achternaam: `Talent`
-   - Geboortedatum: `01-01-2000`
-   - Opleidingsniveau: `MBO`
-   - Straat: `Teststraat`
-   - Huisnummer: `1`
-   - Toevoeging: *(leeg)*
-   - Postcode: `1234 AB`
-   - Woonplaats: `Teststad`
-   - Telefoonnummer: `+31612345678`
-   - E-mail: `test.talent@example.com`
-5. Sla het talent op
-
-**Verwacht resultaat:** Het nieuwe talent verschijnt in de talentenlijst op `/admin/talenten`.
-
-**Prioriteit:** Hoog
-
----
-
-### TC-013: Talent bewerken
-
-**Doel:** Verifiëren dat een beheerder een bestaand talent kan bewerken.
-
-**Stappen:**
-1. Log in als beheerder (zie TC-001)
-2. Navigeer naar `/admin/talenten`
-3. Klik op "Edit" bij het talent aangemaakt in TC-012 (Test Talent)
-4. Wijzig de woonplaats van `Teststad` naar `Gewijzigdstad`
-5. Sla de wijziging op
-
-**Verwacht resultaat:** De woonplaats van het talent is bijgewerkt naar `Gewijzigdstad` in de talentenlijst.
-
-**Prioriteit:** Hoog
-
----
-
-### TC-014: Talent verwijderen
-
-**Doel:** Verifiëren dat een beheerder een talent kan verwijderen.
-
-**Stappen:**
-1. Log in als beheerder (zie TC-001)
-2. Navigeer naar `/admin/talenten`
-3. Klik op "Delete" bij het talent aangemaakt in TC-012 (Test Talent)
-4. Bevestig de verwijdering indien gevraagd
-
-**Verwacht resultaat:** Het talent is niet meer zichtbaar in de talentenlijst op `/admin/talenten`.
-
-**Prioriteit:** Hoog
-
----
-
-### TC-015: Werkervaring toevoegen
-
-**Doel:** Verifiëren dat een beheerder werkervaring kan toevoegen aan een talentprofiel.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar `/admin/talenten`
-2. Klik op "Edit" bij een bestaand talent
-3. Open het paneel "Werkervaring"
-4. Voeg een nieuwe werkervaringsregel toe met testdata (bijv. werkgever: `Test BV`, functie: `Tester`, periode: `2023–2024`)
-5. Sla het talent op
-
-**Verwacht resultaat:** De werkervaring is zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Gemiddeld
-
----
-
-### TC-016: Werkervaring bewerken
-
-**Doel:** Verifiëren dat een beheerder bestaande werkervaring kan bewerken.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met werkervaring
-2. Open het paneel "Werkervaring"
-3. Bewerk de functietitel van een bestaande regel (bijv. van `Tester` naar `Senior Tester`)
-4. Sla het talent op
-
-**Verwacht resultaat:** De gewijzigde functietitel is zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Gemiddeld
-
----
-
-### TC-017: Werkervaring verwijderen
-
-**Doel:** Verifiëren dat een beheerder werkervaring kan verwijderen van een talentprofiel.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met werkervaring
-2. Open het paneel "Werkervaring"
-3. Verwijder een werkervaringsregel
-4. Sla het talent op
-
-**Verwacht resultaat:** De verwijderde werkervaring is niet meer zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Gemiddeld
-
----
-
-### TC-018: Opleiding toevoegen
-
-**Doel:** Verifiëren dat een beheerder een opleiding kan toevoegen aan een talentprofiel.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar het bewerkscherm van een talent
-2. Open het paneel "Opleidingen"
-3. Voeg een opleiding toe met testdata (bijv. opleiding: `Software Developer`, instelling: `Test ROC`, jaar: `2022`)
-4. Sla het talent op
-
-**Verwacht resultaat:** De opleiding is zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Gemiddeld
-
----
-
-### TC-019: Opleiding bewerken
-
-**Doel:** Verifiëren dat een beheerder een bestaande opleiding kan bewerken.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met een opleiding
-2. Open het paneel "Opleidingen"
-3. Wijzig het afstudeerjaar (bijv. van `2022` naar `2023`)
-4. Sla het talent op
-
-**Verwacht resultaat:** Het gewijzigde jaar is zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Gemiddeld
-
----
-
-### TC-020: Opleiding verwijderen
-
-**Doel:** Verifiëren dat een beheerder een opleiding kan verwijderen van een talentprofiel.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met een opleiding
-2. Open het paneel "Opleidingen"
-3. Verwijder een opleiding
-4. Sla het talent op
-
-**Verwacht resultaat:** De verwijderde opleiding is niet meer zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Gemiddeld
-
----
-
-### TC-021: Hobby/interesse toevoegen
-
-**Doel:** Verifiëren dat een beheerder een hobby of interesse kan toevoegen aan een talentprofiel.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar het bewerkscherm van een talent
-2. Open het paneel "Hobby's (& Interesses)"
-3. Voeg een hobby toe (bijv. `Schaken`)
-4. Sla het talent op
-
-**Verwacht resultaat:** De hobby is zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Laag
-
----
-
-### TC-022: Hobby/interesse verwijderen
-
-**Doel:** Verifiëren dat een beheerder een hobby of interesse kan verwijderen van een talentprofiel.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met een hobby
-2. Open het paneel "Hobby's (& Interesses)"
-3. Verwijder een hobby
-4. Sla het talent op
-
-**Verwacht resultaat:** De verwijderde hobby is niet meer zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Laag
-
----
-
-### TC-023: Hobby/interesse sorteren
-
-**Doel:** Verifiëren dat een beheerder de volgorde van hobby's en interesses kan aanpassen.
-
-**Stappen:**
-1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met meerdere hobby's
-2. Open het paneel "Hobby's (& Interesses)"
-3. Verander de volgorde van twee hobby's (bijv. via slepen of prioriteitsknop)
-4. Sla het talent op
-
-**Verwacht resultaat:** De nieuwe volgorde van hobby's is zichtbaar in het profiel van het talent.
-
-**Prioriteit:** Laag
-
----
-
-## NFE1/NFE3 — IDOR
-
-### TC-024: IDOR — talentprofiel via URL-manipulatie
-
-**Doel:** Verifiëren dat persoonsgegevens van talenten niet toegankelijk zijn via directe URL-manipulatie zonder login.
-
-**Stappen:**
-1. Zorg dat je niet ingelogd bent
-2. Navigeer naar `/talent/talentprofile/1`
-3. Noteer welke gegevens zichtbaar zijn
-4. Verander het ID in de URL naar `/talent/talentprofile/2`, `/talent/talentprofile/3`, etc.
-5. Controleer per profiel welke gegevens zichtbaar zijn
-
-**Verwacht resultaat:** Voor geen enkel profiel zijn naam of contactgegevens zichtbaar zonder login. De applicatie toont voor elk ID dezelfde beperkte weergave als voor ingelogde bezoekers.
-
-**Prioriteit:** Hoog
-
----
-
 ## FE5 — Talentprofiel
 
 ### TC-010: Talentprofiel volledig zichtbaar voor ingelogde gebruiker
@@ -425,5 +196,234 @@
 - Er is een "Inloggen" call-to-action zichtbaar
 
 **Prioriteit:** Hoog
+
+---
+
+## NFE1/NFE3 — IDOR
+
+### TC-012: IDOR — talentprofiel via URL-manipulatie
+
+**Doel:** Verifiëren dat persoonsgegevens van talenten niet toegankelijk zijn via directe URL-manipulatie zonder login.
+
+**Stappen:**
+1. Zorg dat je niet ingelogd bent
+2. Navigeer naar `/talent/talentprofile/1`
+3. Noteer welke gegevens zichtbaar zijn
+4. Verander het ID in de URL naar `/talent/talentprofile/2`, `/talent/talentprofile/3`, etc.
+5. Controleer per profiel welke gegevens zichtbaar zijn
+
+**Verwacht resultaat:** Voor geen enkel profiel zijn naam of contactgegevens zichtbaar zonder login. De applicatie toont voor elk ID dezelfde beperkte weergave als voor niet-ingelogde gebruikers.
+
+**Prioriteit:** Hoog
+
+---
+
+## FE11 — Talentenbeheer (admin)
+
+### TC-013: Talent aanmaken
+
+**Doel:** Verifiëren dat een beheerder een nieuw talent kan aanmaken via het admin panel.
+
+**Stappen:**
+1. Log in als beheerder (zie TC-001)
+2. Navigeer naar `/admin/talenten`
+3. Klik op "Talent toevoegen"
+4. Vul de verplichte velden in met de volgende testdata:
+   - Initialen: `T.`
+   - Voornaam: `Test`
+   - Tussenvoegsel: *(leeg)*
+   - Achternaam: `Talent`
+   - Geboortedatum: `01-01-2000`
+   - Opleidingsniveau: `MBO`
+   - Straat: `Teststraat`
+   - Huisnummer: `1`
+   - Toevoeging: *(leeg)*
+   - Postcode: `1234 AB`
+   - Woonplaats: `Teststad`
+   - Telefoonnummer: `+31612345678`
+   - E-mail: `test.talent@example.com`
+5. Sla het talent op
+
+**Verwacht resultaat:** Het nieuwe talent verschijnt in de talentenlijst op `/admin/talenten`.
+
+**Prioriteit:** Hoog
+
+---
+
+### TC-014: Talent bewerken
+
+**Doel:** Verifiëren dat een beheerder een bestaand talent kan bewerken.
+
+**Stappen:**
+1. Log in als beheerder (zie TC-001)
+2. Navigeer naar `/admin/talenten`
+3. Klik op "Edit" bij het talent aangemaakt in TC-013 (Test Talent)
+4. Wijzig de woonplaats van `Teststad` naar `Gewijzigdstad`
+5. Sla de wijziging op
+
+**Verwacht resultaat:** De woonplaats van het talent is bijgewerkt naar `Gewijzigdstad` in de talentenlijst.
+
+**Prioriteit:** Hoog
+
+---
+
+### TC-015: Talent verwijderen
+
+**Doel:** Verifiëren dat een beheerder een talent kan verwijderen.
+
+**Stappen:**
+1. Log in als beheerder (zie TC-001)
+2. Navigeer naar `/admin/talenten`
+3. Klik op "Delete" bij het talent aangemaakt in TC-013 (Test Talent)
+4. Bevestig de verwijdering indien gevraagd
+
+**Verwacht resultaat:** Het talent is niet meer zichtbaar in de talentenlijst op `/admin/talenten`.
+
+**Prioriteit:** Hoog
+
+---
+
+### TC-016: Werkervaring toevoegen
+
+**Doel:** Verifiëren dat een beheerder werkervaring kan toevoegen aan een talentprofiel.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar `/admin/talenten`
+2. Klik op "Edit" bij een bestaand talent
+3. Open het paneel "Werkervaring"
+4. Voeg een nieuwe werkervaringsregel toe met testdata (bijv. werkgever: `Test BV`, functie: `Tester`, periode: `2023–2024`)
+5. Sla het talent op
+
+**Verwacht resultaat:** De werkervaring is zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Gemiddeld
+
+---
+
+### TC-017: Werkervaring bewerken
+
+**Doel:** Verifiëren dat een beheerder bestaande werkervaring kan bewerken.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met werkervaring
+2. Open het paneel "Werkervaring"
+3. Bewerk de functietitel van een bestaande regel (bijv. van `Tester` naar `Senior Tester`)
+4. Sla het talent op
+
+**Verwacht resultaat:** De gewijzigde functietitel is zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Gemiddeld
+
+---
+
+### TC-018: Werkervaring verwijderen
+
+**Doel:** Verifiëren dat een beheerder werkervaring kan verwijderen van een talentprofiel.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met werkervaring
+2. Open het paneel "Werkervaring"
+3. Verwijder een werkervaringsregel
+4. Sla het talent op
+
+**Verwacht resultaat:** De verwijderde werkervaring is niet meer zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Gemiddeld
+
+---
+
+### TC-019: Opleiding toevoegen
+
+**Doel:** Verifiëren dat een beheerder een opleiding kan toevoegen aan een talentprofiel.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent
+2. Open het paneel "Opleidingen"
+3. Voeg een opleiding toe met testdata (bijv. opleiding: `Software Developer`, instelling: `Test ROC`, jaar: `2022`)
+4. Sla het talent op
+
+**Verwacht resultaat:** De opleiding is zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Gemiddeld
+
+---
+
+### TC-020: Opleiding bewerken
+
+**Doel:** Verifiëren dat een beheerder een bestaande opleiding kan bewerken.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met een opleiding
+2. Open het paneel "Opleidingen"
+3. Wijzig het afstudeerjaar (bijv. van `2022` naar `2023`)
+4. Sla het talent op
+
+**Verwacht resultaat:** Het gewijzigde jaar is zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Gemiddeld
+
+---
+
+### TC-021: Opleiding verwijderen
+
+**Doel:** Verifiëren dat een beheerder een opleiding kan verwijderen van een talentprofiel.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met een opleiding
+2. Open het paneel "Opleidingen"
+3. Verwijder een opleiding
+4. Sla het talent op
+
+**Verwacht resultaat:** De verwijderde opleiding is niet meer zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Gemiddeld
+
+---
+
+### TC-022: Hobby/interesse toevoegen
+
+**Doel:** Verifiëren dat een beheerder een hobby of interesse kan toevoegen aan een talentprofiel.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent
+2. Open het paneel "Hobby's (& Interesses)"
+3. Voeg een hobby toe (bijv. `Schaken`)
+4. Sla het talent op
+
+**Verwacht resultaat:** De hobby is zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Laag
+
+---
+
+### TC-023: Hobby/interesse verwijderen
+
+**Doel:** Verifiëren dat een beheerder een hobby of interesse kan verwijderen van een talentprofiel.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met een hobby
+2. Open het paneel "Hobby's (& Interesses)"
+3. Verwijder een hobby
+4. Sla het talent op
+
+**Verwacht resultaat:** De verwijderde hobby is niet meer zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Laag
+
+---
+
+### TC-024: Hobby/interesse sorteren
+
+**Doel:** Verifiëren dat een beheerder de volgorde van hobby's en interesses kan aanpassen.
+
+**Stappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met meerdere hobby's
+2. Open het paneel "Hobby's (& Interesses)"
+3. Verander de volgorde van twee hobby's (bijv. via slepen of prioriteitsknop)
+4. Sla het talent op
+
+**Verwacht resultaat:** De nieuwe volgorde van hobby's is zichtbaar in het profiel van het talent.
+
+**Prioriteit:** Laag
 
 ---
