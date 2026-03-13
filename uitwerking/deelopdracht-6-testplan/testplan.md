@@ -72,6 +72,33 @@ Sommige testcases testen dezelfde pagina of functionaliteit vanuit een andere in
 
 De gedetailleerde testcases staan in `testcases.md` (in deze map). Elke testcase verwijst terug naar een FE- of NFE-eis uit het SRS.
 
+| TC | Eis | Omschrijving | Prioriteit |
+|---|---|---|---|
+| TC-001 | FE1 | Inloggen met geldige gegevens | Hoog |
+| TC-002 | FE1 | Inloggen met onjuist wachtwoord | Hoog |
+| TC-003 | FE1 | Inloggen met onbekend e-mailadres | Gemiddeld |
+| TC-004 | FE2 | Uitloggen | Hoog |
+| TC-005 | FE2 | Sessie beëindigd na uitloggen | Hoog |
+| TC-006 | FE3 | Talentprofiel afgeschermd voor bezoekers | Hoog |
+| TC-007 | FE3 | Admin panel toegankelijkheid per rol | Hoog |
+| TC-008 | FE4 | Filteren op provincie | Hoog |
+| TC-009 | FE4 | Filteren op beschikbaarheid (grenswaarden) | Hoog |
+| TC-010 | FE5 | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | Hoog |
+| TC-011 | FE5 | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | Hoog |
+| TC-012 | NFE1/NFE3 | IDOR — talentprofiel via URL-manipulatie | Hoog |
+| TC-013 | FE11 | Talent aanmaken | Hoog |
+| TC-014 | FE11 | Talent bewerken | Hoog |
+| TC-015 | FE11 | Talent verwijderen | Hoog |
+| TC-016 | FE11 | Werkervaring toevoegen | Gemiddeld |
+| TC-017 | FE11 | Werkervaring bewerken | Gemiddeld |
+| TC-018 | FE11 | Werkervaring verwijderen | Gemiddeld |
+| TC-019 | FE11 | Opleiding toevoegen | Gemiddeld |
+| TC-020 | FE11 | Opleiding bewerken | Gemiddeld |
+| TC-021 | FE11 | Opleiding verwijderen | Gemiddeld |
+| TC-022 | FE11 | Hobby/interesse toevoegen | Laag |
+| TC-023 | FE11 | Hobby/interesse verwijderen | Laag |
+| TC-024 | FE11 | Hobby/interesse sorteren | Laag |
+
 ---
 
 ## 4. Planning
