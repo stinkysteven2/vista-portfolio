@@ -142,8 +142,7 @@ De testuitvoering voor deelopdracht 6 is gepland in de week van **16 maart**. De
 
 ### 5.4 Mensen
 
-- De admin moet vóór testfase 4 een testaccount voor een talent aanmaken.
-- Geen andere externe afhankelijkheden.
+- Geen externe afhankelijkheden.
 
 ---
 
