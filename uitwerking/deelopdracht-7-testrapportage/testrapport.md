@@ -15,6 +15,8 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 
 ## 2. Testomgeving
 
+**Geautomatiseerd**
+
 | Onderdeel | Details |
 |---|---|
 | Applicatie | IT Talenten Portaal |
@@ -22,7 +24,13 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 | Browser | Chromium (headless) via Playwright |
 | Authenticatie | Keycloak (bee-ids-test.azurewebsites.net) |
 | Testscript | `lib/run_tests.py` |
-| Uitvoerdatum | 27 maart 2026 |
+
+**Handmatig**
+
+| Onderdeel | Details |
+|---|---|
+| Besturingssysteem | Windows 10 |
+| Browser | Firefox |
 
 ---
 
