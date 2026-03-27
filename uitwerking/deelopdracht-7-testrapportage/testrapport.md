@@ -1,0 +1,101 @@
+# Testrapport — IT Talenten Portaal
+
+> Auteur: Steven
+> Datum: maart 2026
+> Applicatie: [IT Talenten Portaal](https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent)
+> Gebaseerd op: testplan en testcases uit deelopdracht 6
+
+---
+
+## 1. Inleiding
+
+Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Talenten Portaal. De testen zijn gebaseerd op het testplan uit deelopdracht 6 en zijn uitgevoerd via geautomatiseerde Playwright-scripts.
+
+---
+
+## 2. Testomgeving
+
+| Onderdeel | Details |
+|---|---|
+| Applicatie | IT Talenten Portaal |
+| URL | https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent |
+| Browser | Chromium (headless) via Playwright |
+| Authenticatie | Keycloak (bee-ids-test.azurewebsites.net) |
+| Testscript | `lib/run_tests.py` |
+| Uitvoerdatum | 27 maart 2026 |
+
+---
+
+## 3. Testresultaten
+
+| TC-ID | Omschrijving | Eis | Prioriteit | Status | Uitgevoerd om |
+|---|---|---|---|---|---|
+| TC-001 | Inloggen met geldige gegevens | FE1 | Hoog | **GESLAAGD** | 2026-03-27 10:34:35 |
+| TC-002 | Inloggen met onjuist wachtwoord | FE1 | Hoog | **GESLAAGD** | 2026-03-27 10:38:00 |
+
+### TC-001 — Detail
+
+**Teststappen:**
+1. Navigeer naar de startpagina (`/talent`)
+2. Klik op het login-icoon (`section#login i.material-icons`) in de navigatiebalk
+3. Keycloak-loginpagina laadt op extern domein
+4. Vul geldige gebruikersnaam en wachtwoord in
+5. Klik op "Sign In"
+
+**Verwacht resultaat:** Redirect terug naar portaal; logout-icoon zichtbaar; login-icoon verdwenen
+
+**Werkelijk resultaat:**
+- URL na inloggen: `https://...it-talenten-portaal.../talent`
+- Logout zichtbaar: **ja**
+- Login zichtbaar: **nee**
+
+**Conclusie:** Inloggen werkt correct. De applicatie stuurt de gebruiker terug naar de startpagina en toont het logout-icoon.
+
+**Bewijs:**
+![TC-001 geslaagd](screenshots/tc001-geslaagd.png)
+
+### TC-002 — Detail
+
+**Teststappen:**
+1. Navigeer naar de startpagina (`/talent`) — frisse sessie (niet ingelogd)
+2. Klik op het login-icoon in de navigatiebalk
+3. Keycloak-loginpagina laadt
+4. Vul geldige gebruikersnaam in, maar een onjuist wachtwoord
+5. Klik op "Sign In"
+
+**Verwacht resultaat:** Gebruiker blijft op de loginpagina; foutmelding *"Invalid username or password."* zichtbaar
+
+**Werkelijk resultaat:**
+- URL na submit: Keycloak authenticate-endpoint (geen redirect naar portaal)
+- Foutmelding: **"Invalid username or password."**
+
+**Conclusie:** Het systeem toont de juiste foutmelding en stuurt de gebruiker niet door. Werkt correct.
+
+**Bewijs:**
+![TC-002 geslaagd](screenshots/tc002-geslaagd.png)
+
+---
+
+## 4. Gevonden fouten
+
+Geen fouten gevonden in de uitgevoerde testen.
+
+---
+
+## 5. Statistieken
+
+| Maat | Waarde |
+|---|---|
+| Totaal aantal testen | 2 |
+| Geslaagd | 2 |
+| Gefaald | 0 |
+| Geblokkeerd | 0 |
+| Slaagpercentage | 100% |
+
+> Let op: dit rapport bevat TC-001 en TC-002. De overige testcases worden in volgende sessies toegevoegd.
+
+---
+
+## 6. Conclusie
+
+*Nog in te vullen nadat alle testcases zijn uitgevoerd.*
