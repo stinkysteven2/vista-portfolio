@@ -107,7 +107,21 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 
 ## 4. Gevonden fouten
 
-Geen fouten gevonden in de uitgevoerde testen.
+### F-001: Loginpagina in het Engels
+
+| Veld | Details |
+|---|---|
+| Ernst | Middel |
+| Gevonden bij | TC-001, TC-002, TC-003 |
+| Rol | Alle gebruikers |
+
+**Teststappen:** Klik op het login-icoon in de navigatiebalk.
+
+**Verwacht:** Loginpagina in het Nederlands (applicatie is gericht op Nederlandse gebruikers).
+
+**Werkelijk:** Loginpagina toont Engelse teksten ("Sign in to your account", "Username or email", "Password", "Sign In", "New user? Register").
+
+**SRS-eis:** Niet expliciet vastgelegd, maar strijdig met de Nederlandse context van de applicatie.
 
 ---
 
