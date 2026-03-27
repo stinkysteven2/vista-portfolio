@@ -30,8 +30,8 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 
 | TC-ID | Omschrijving | Eis | Prioriteit | Status | Uitgevoerd om |
 |---|---|---|---|---|---|
-| TC-001 | Inloggen met geldige gegevens | FE1 | Hoog | **GESLAAGD** | 2026-03-27 10:34:35 |
-| TC-002 | Inloggen met onjuist wachtwoord | FE1 | Hoog | **GESLAAGD** | 2026-03-27 10:38:00 |
+| [TC-001](#tc-001--detail) | Inloggen met geldige gegevens | FE1 | Hoog | **GESLAAGD** | 2026-03-27 10:34:35 |
+| [TC-002](#tc-002--detail) | Inloggen met onjuist wachtwoord | FE1 | Hoog | **GESLAAGD** | 2026-03-27 10:38:00 |
 
 ### TC-001 — Detail
 
