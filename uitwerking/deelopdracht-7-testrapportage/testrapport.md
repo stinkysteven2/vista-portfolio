@@ -32,6 +32,7 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 |---|---|---|---|---|---|
 | [TC-001](#tc-001--detail) | Inloggen met geldige gegevens | FE1 | Hoog | **GESLAAGD** | 2026-03-27 10:34:35 |
 | [TC-002](#tc-002--detail) | Inloggen met onjuist wachtwoord | FE1 | Hoog | **GESLAAGD** | 2026-03-27 10:38:00 |
+| [TC-003](#tc-003--detail) | Inloggen met onbekend e-mailadres | FE1 | Gemiddeld | **GESLAAGD** | 2026-03-27 11:55:48 |
 
 ### TC-001 — Detail
 
@@ -74,6 +75,26 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 **Bewijs:**
 ![TC-002 geslaagd](screenshots/tc002-geslaagd.png)
 
+### TC-003 — Detail
+
+**Teststappen:**
+1. Navigeer naar de startpagina (`/talent`) — handmatig, Firefox
+2. Klik op het login-icoon in de navigatiebalk
+3. Keycloak-loginpagina laadt
+4. Vul een onbekend e-mailadres in (`ditbestaaniet@test.nl`) en willekeurig wachtwoord
+5. Klik op "Sign In"
+
+**Verwacht resultaat:** Blijft op loginpagina; foutmelding *"Invalid username or password."* zichtbaar; identiek aan TC-002
+
+**Werkelijk resultaat:**
+- URL na submit: Keycloak authenticate-endpoint (geen redirect naar portaal)
+- Foutmelding: **"Invalid username or password."**
+
+**Conclusie:** Het systeem maakt geen onderscheid tussen onbekend account en fout wachtwoord. Werkt correct.
+
+**Bewijs:**
+![TC-003 geslaagd](screenshots/tc003-geslaagd.png)
+
 ---
 
 ## 4. Gevonden fouten
@@ -86,13 +107,13 @@ Geen fouten gevonden in de uitgevoerde testen.
 
 | Maat | Waarde |
 |---|---|
-| Totaal aantal testen | 2 |
-| Geslaagd | 2 |
+| Totaal aantal testen | 3 |
+| Geslaagd | 3 |
 | Gefaald | 0 |
 | Geblokkeerd | 0 |
 | Slaagpercentage | 100% |
 
-> Let op: dit rapport bevat TC-001 en TC-002. De overige testcases worden in volgende sessies toegevoegd.
+> Let op: dit rapport bevat TC-001 t/m TC-003. De overige testcases worden in volgende sessies toegevoegd.
 
 ---
 
