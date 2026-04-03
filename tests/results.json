@@ -1,0 +1,58 @@
+{
+  "TC-001": {
+    "tc_id": "TC-001",
+    "description": "Inloggen met geldige gegevens",
+    "status": "GESLAAGD",
+    "expected": "Doorgestuurd naar startpagina; logout-knop zichtbaar; login-knop verdwenen",
+    "actual": "URL: https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent | Logout zichtbaar: True | Login zichtbaar: False",
+    "notes": "",
+    "screenshot": "uitwerking/deelopdracht-7-testrapportage/screenshots/tc001-geslaagd.png",
+    "testomgeving": "geautomatiseerd",
+    "timestamp": "2026-04-03 12:24:19",
+    "eis": "FE1",
+    "prioriteit": "Hoog",
+    "conclusie": "Inloggen werkt correct. De applicatie stuurt de gebruiker terug naar de startpagina en toont het logout-icoon."
+  },
+  "TC-002": {
+    "tc_id": "TC-002",
+    "description": "Inloggen met onjuist wachtwoord",
+    "status": "GESLAAGD",
+    "expected": "Blijft op loginpagina; foutmelding 'Invalid username or password.' zichtbaar",
+    "actual": "URL: https://bee-ids-test.azurewebsites.net/realms/bee-ideas-testing-realm/login-actions/authenticate?execution=f43f0322-1769-446a-8e4d-a96c0f233db6&client_id=angular-app-client&tab_id=64rs34enGpM&client_data=eyJydSI6Imh0dHBzOi8vaXQtdGFsZW50ZW4tcG9ydGFhbC10ZXN0LWl0LXRhbGVudGVuLXdlYmFwcC10ZXN0LmlhcG1rdy5lYXN5cGFuZWwuaG9zdC90YWxlbnQiLCJydCI6ImNvZGUiLCJybSI6ImZyYWdtZW50Iiwic3QiOiJhNWRkNWNlYS00MGQ1LTQyYmEtOGZiMy1lYzcxZTA2YmVhNjEifQ | Foutmelding: 'Invalid username or password.'",
+    "notes": "",
+    "screenshot": "uitwerking/deelopdracht-7-testrapportage/screenshots/tc002-geslaagd.png",
+    "testomgeving": "geautomatiseerd",
+    "timestamp": "2026-04-03 12:24:25",
+    "eis": "FE1",
+    "prioriteit": "Hoog",
+    "conclusie": "Het systeem toont de juiste foutmelding en stuurt de gebruiker niet door. Werkt correct."
+  },
+  "TC-003": {
+    "tc_id": "TC-003",
+    "description": "Inloggen met onbekend e-mailadres",
+    "eis": "FE1",
+    "prioriteit": "Gemiddeld",
+    "status": "GESLAAGD",
+    "expected": "Blijft op loginpagina; foutmelding 'Invalid username or password.' zichtbaar; identiek aan TC-002",
+    "actual": "URL: Keycloak authenticate-endpoint (geen redirect naar portaal) | Foutmelding: 'Invalid username or password.'",
+    "conclusie": "Het systeem maakt geen onderscheid tussen onbekend account en fout wachtwoord. Werkt correct.",
+    "screenshot": "screenshots/tc003-geslaagd.png",
+    "testomgeving": "handmatig",
+    "notes": "",
+    "timestamp": "2026-03-27 11:55:48"
+  },
+  "TC-004": {
+    "tc_id": "TC-004",
+    "description": "Uitloggen",
+    "status": "GESLAAGD",
+    "expected": "Login-icoon zichtbaar; logout-icoon verdwenen",
+    "actual": "Login zichtbaar: True | Logout zichtbaar: False",
+    "notes": "",
+    "screenshot": "uitwerking/deelopdracht-7-testrapportage/screenshots/tc004-geslaagd.png",
+    "testomgeving": "geautomatiseerd",
+    "timestamp": "2026-04-03 12:24:31",
+    "eis": "FE2",
+    "prioriteit": "Hoog",
+    "conclusie": "Uitloggen werkt correct. De applicatie toont het login-icoon en verbergt het logout-icoon."
+  }
+}
