@@ -54,5 +54,19 @@
     "eis": "FE2",
     "prioriteit": "Hoog",
     "conclusie": "Uitloggen werkt correct. De applicatie toont het login-icoon en verbergt het logout-icoon."
+  },
+  "TC-005": {
+    "tc_id": "TC-005",
+    "description": "Sessie beëindigd na uitloggen",
+    "status": "GESLAAGD",
+    "expected": "Beschermde content niet meer zichtbaar na uitloggen en terugknop",
+    "actual": "URL: https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent | Nog op profiel: False | Logout zichtbaar: False | Login CTA zichtbaar: False",
+    "notes": "",
+    "screenshot": "uitwerking/deelopdracht-7-testrapportage/screenshots/tc005-geslaagd.png",
+    "testomgeving": "geautomatiseerd",
+    "timestamp": "2026-04-03 12:32:43",
+    "eis": "FE2",
+    "prioriteit": "Hoog",
+    "conclusie": "Na uitloggen stuurt de terugknop de gebruiker niet terug naar het talentprofiel maar naar de startpagina. De applicatie beëindigt de sessie correct en voorkomt actief toegang tot beschermde content."
   }
 }
