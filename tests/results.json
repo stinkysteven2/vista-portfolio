@@ -68,5 +68,19 @@
     "eis": "FE2",
     "prioriteit": "Hoog",
     "conclusie": "Na uitloggen stuurt de terugknop de gebruiker niet terug naar het talentprofiel maar naar de startpagina. De applicatie beëindigt de sessie correct en voorkomt actief toegang tot beschermde content."
+  },
+  "TC-006": {
+    "tc_id": "TC-006",
+    "description": "Talentprofiel afgeschermd voor bezoekers",
+    "eis": "FE3",
+    "prioriteit": "Hoog",
+    "status": "GESLAAGD",
+    "expected": "De getoonde informatie is niet te herleiden tot een persoon.",
+    "actual": "De getoonde informatie is niet te herleiden tot een persoon.",
+    "conclusie": "Naam en contactgegevens zijn niet zichtbaar voor niet-ingelogde gebruikers. Een inlog call-to-action is aanwezig.",
+    "screenshot": "tc006-geslaagd",
+    "testomgeving": "windows 10, firefox",
+    "notes": "",
+    "timestamp": "2026-04-09 10:41:33"
   }
 }

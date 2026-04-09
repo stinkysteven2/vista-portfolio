@@ -2,7 +2,7 @@ from helpers import login, result, BASE_URL, SCREENSHOTS_DIR
 from playwright.sync_api import Page
 
 TC_ID = "TC-015"
-ADMIN_TALENTEN_URL = f"{BASE_URL}/admin/talenten"
+ADMIN_TALENTEN_URL = f"{BASE_URL.replace('/talent', '')}/admin/talenten"
 
 
 def run(page: Page):
