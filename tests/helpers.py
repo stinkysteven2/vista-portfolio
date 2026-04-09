@@ -11,6 +11,8 @@ load_dotenv()
 BASE_URL = "https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent"
 USERNAME = os.getenv("TALENTEN_USERNAME", "")
 PASSWORD = os.getenv("TALENTEN_PASSWORD", "")
+REGULAR_USERNAME = os.getenv("TALENTEN_REGULAR_USERNAME", "")
+REGULAR_PASSWORD = os.getenv("TALENTEN_REGULAR_PASSWORD", "")
 SCREENSHOTS_DIR = "uitwerking/deelopdracht-7-testrapportage/screenshots"
 RESULTS_JSON = Path(__file__).parent / "results.json"
 
@@ -75,17 +77,26 @@ def save_results():
     print(f"\nResultaten opgeslagen in {RESULTS_JSON}")
 
 
-def login(page: Page) -> bool:
-    """Helper: log in met geldige credentials. Geeft True terug bij succes."""
+def _do_login(page: Page, username: str, password: str) -> bool:
     page.goto(BASE_URL, wait_until="networkidle", timeout=15000)
     try:
         page.locator("section#login i.material-icons").click(timeout=5000)
         page.wait_for_load_state("networkidle", timeout=10000)
-        page.locator("input[type='text']").first.fill(USERNAME, timeout=5000)
-        page.locator("input[type='password']").first.fill(PASSWORD, timeout=5000)
+        page.locator("input[type='text']").first.fill(username, timeout=5000)
+        page.locator("input[type='password']").first.fill(password, timeout=5000)
         page.locator("button[type='submit'], input[type='submit']").first.click(timeout=5000)
         page.wait_for_url(f"{BASE_URL}**", timeout=15000)
         page.wait_for_load_state("networkidle", timeout=10000)
         return True
     except Exception:
         return False
+
+
+def login(page: Page) -> bool:
+    """Log in als beheerder."""
+    return _do_login(page, USERNAME, PASSWORD)
+
+
+def login_regular(page: Page) -> bool:
+    """Log in als gewone gebruiker (niet-admin)."""
+    return _do_login(page, REGULAR_USERNAME, REGULAR_PASSWORD)

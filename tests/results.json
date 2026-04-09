@@ -82,5 +82,19 @@
     "testomgeving": "windows 10, firefox",
     "notes": "",
     "timestamp": "2026-04-09 10:41:33"
+  },
+  "TC-007": {
+    "tc_id": "TC-007",
+    "description": "Admin panel toegankelijkheid per rol",
+    "status": "GESLAAGD",
+    "expected": "Bezoeker en niet-admin omgeleid; beheerder heeft toegang",
+    "actual": "Bezoeker geblokkeerd: True | Niet-admin geblokkeerd: True | Beheerder heeft toegang: True",
+    "notes": "Bezoeker: uitwerking/deelopdracht-7-testrapportage/screenshots/tc007-bezoeker.png | Niet-admin: uitwerking/deelopdracht-7-testrapportage/screenshots/tc007-niet-admin.png",
+    "screenshot": "uitwerking/deelopdracht-7-testrapportage/screenshots/tc007-admin.png",
+    "testomgeving": "geautomatiseerd",
+    "timestamp": "2026-04-09 10:54:03",
+    "eis": "FE3",
+    "prioriteit": "Hoog",
+    "conclusie": "Alleen de beheerder heeft toegang tot het admin panel. Bezoekers en niet-admin gebruikers worden omgeleid."
   }
 }

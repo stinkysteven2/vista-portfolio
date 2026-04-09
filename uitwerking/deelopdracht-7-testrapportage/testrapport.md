@@ -151,6 +151,22 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 
 **SRS-eis:** Niet expliciet vastgelegd, maar strijdig met de Nederlandse context van de applicatie.
 
+### F-002: Geen uitlogknop in het admin panel
+
+| Veld | Details |
+|---|---|
+| Ernst | Laag |
+| Gevonden bij | TC-007 |
+| Rol | Beheerder |
+
+**Teststappen:** Log in als beheerder en navigeer naar het admin panel (`/admin`).
+
+**Verwacht:** Een uitlogknop of -icoon is beschikbaar vanuit het admin panel.
+
+**Werkelijk:** Het admin panel toont geen uitlogknop. De beheerder kan niet uitloggen zonder handmatig naar de hoofdapplicatie te navigeren.
+
+**SRS-eis:** Niet expliciet vastgelegd, maar strijdig met basale gebruikersverwachtingen rondom sessiebeheer.
+
 ---
 
 ## 5. Statistieken
