@@ -80,7 +80,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 **Conclusie:** Inloggen werkt correct. De applicatie stuurt de gebruiker terug naar de startpagina en toont het logout-icoon.
 
 **Bewijs:**
-![TC-001 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc001-geslaagd.png)
+![TC-001 geslaagd](screenshots/tc001-geslaagd.png)
 
 ---
 
@@ -102,7 +102,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 **Conclusie:** Het systeem toont de juiste foutmelding en stuurt de gebruiker niet door. Werkt correct.
 
 **Bewijs:**
-![TC-002 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc002-geslaagd.png)
+![TC-002 geslaagd](screenshots/tc002-geslaagd.png)
 
 ---
 
@@ -124,7 +124,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 **Conclusie:** Het systeem maakt geen onderscheid tussen onbekend account en fout wachtwoord. Werkt correct.
 
 **Bewijs:**
-![TC-003 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc003-geslaagd.png)
+![TC-003 geslaagd](screenshots/tc003-geslaagd.png)
 
 ---
 
@@ -143,7 +143,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 **Conclusie:** Uitloggen werkt correct. De applicatie toont het login-icoon en verbergt het logout-icoon.
 
 **Bewijs:**
-![TC-004 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc004-geslaagd.png)
+![TC-004 geslaagd](screenshots/tc004-geslaagd.png)
 
 ---
 
@@ -166,7 +166,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 **Conclusie:** Na uitloggen stuurt de terugknop de gebruiker niet terug naar het talentprofiel maar naar de startpagina. De applicatie beëindigt de sessie correct en voorkomt actief toegang tot beschermde content.
 
 **Bewijs:**
-![TC-005 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc005-geslaagd.png)
+![TC-005 geslaagd](screenshots/tc005-geslaagd.png)
 
 ---
 
@@ -184,7 +184,7 @@ De getoonde informatie is niet te herleiden tot een persoon.
 **Conclusie:** Naam en contactgegevens zijn niet zichtbaar voor niet-ingelogde gebruikers. Een inlog call-to-action is aanwezig.
 
 **Bewijs:**
-![TC-006 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc006-geslaagd.png)
+![TC-006 geslaagd](screenshots/tc006-geslaagd.png)
 
 ---
 
@@ -205,7 +205,7 @@ De getoonde informatie is niet te herleiden tot een persoon.
 **Conclusie:** Alleen de beheerder heeft toegang tot het admin panel. Bezoekers en niet-admin gebruikers worden omgeleid.
 
 **Bewijs:**
-![TC-007 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc007-admin.png)
+![TC-007 geslaagd](screenshots/tc007-admin.png)
 
 ---
 
@@ -226,7 +226,7 @@ De getoonde informatie is niet te herleiden tot een persoon.
 **Conclusie:** Alleen talenten uit de geselecteerde provincie worden getoond. Het filter werkt correct.
 
 **Bewijs:**
-![TC-008 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc008-geslaagd.png)
+![TC-008 geslaagd](screenshots/tc008-geslaagd.png)
 
 ---
 
@@ -247,7 +247,7 @@ De getoonde informatie is niet te herleiden tot een persoon.
 **Conclusie:** Alleen talenten binnen het opgegeven beschikbaarheidsbereik worden getoond. Grenswaarden worden correct verwerkt.
 
 **Bewijs:**
-![TC-009 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc009-geslaagd.png)
+![TC-009 geslaagd](screenshots/tc009-geslaagd.png)
 
 ---
 
@@ -265,7 +265,7 @@ Volledige attributenset zichtbaar: naam, karakterkenmerken en kernkwaliteiten
 **Conclusie:** Alle verwachte profielattributen zijn zichtbaar voor de ingelogde gebruiker.
 
 **Bewijs:**
-![TC-010 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc010-geslaagd.png)
+![TC-010 geslaagd](screenshots/tc010-geslaagd.png)
 
 ---
 
@@ -283,7 +283,7 @@ Geen herleidbare persoonsgegevens zichtbaar voor niet-ingelogde bezoeker
 **Conclusie:** Persoonsgegevens zijn verborgen voor bezoekers. Publieke attributen en een inlog call-to-action zijn zichtbaar.
 
 **Bewijs:**
-![TC-011 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc011-geslaagd.png)
+![TC-011 geslaagd](screenshots/tc011-geslaagd.png)
 
 ---
 
@@ -305,7 +305,7 @@ Geen herleidbare persoonsgegevens zichtbaar voor niet-ingelogde bezoeker
 **Conclusie:** Voor geen enkel profiel zijn naam of contactgegevens zichtbaar zonder login. Geen IDOR-kwetsbaarheid aangetoond.
 
 **Bewijs:**
-![TC-012 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc012-geslaagd.png)
+![TC-012 geslaagd](screenshots/tc012-geslaagd.png)
 
 ---
 
@@ -326,7 +326,7 @@ Talent 'Test Talent' succesvol aangemaakt en zichtbaar in de lijst. Geen bevesti
 **Conclusie:** Het talent wordt correct aangemaakt en verschijnt in de lijst. De applicatie geeft echter geen zichtbare bevestiging aan de beheerder na het opslaan.
 
 **Bewijs:**
-![TC-013 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc013-geslaagd.png)
+![TC-013 geslaagd](screenshots/tc013-geslaagd.png)
 
 ---
 
@@ -347,7 +347,7 @@ Wijziging correct opgeslagen en zichtbaar
 **Conclusie:** Het bewerken van een talent werkt correct. Wijzigingen worden opgeslagen en zijn direct zichtbaar.
 
 **Bewijs:**
-![TC-014 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc014-geslaagd.png)
+![TC-014 geslaagd](screenshots/tc014-geslaagd.png)
 
 ---
 
@@ -367,7 +367,7 @@ Talent succesvol verwijderd. Bevestigingsdialoog aanwezig voor verwijdering.
 **Conclusie:** Het verwijderen van een talent werkt correct. Een bevestigingsdialoog voorkomt per ongeluk verwijderen.
 
 **Bewijs:**
-![TC-015 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc015-geslaagd.png)
+![TC-015 geslaagd](screenshots/tc015-geslaagd.png)
 
 ---
 
@@ -389,7 +389,7 @@ Talent succesvol verwijderd. Bevestigingsdialoog aanwezig voor verwijdering.
 **Conclusie:** De werkervaring is zichtbaar in het profiel van het talent.
 
 **Bewijs:**
-![TC-016 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc016-geslaagd.png)
+![TC-016 geslaagd](screenshots/tc016-geslaagd.png)
 
 ---
 
@@ -409,7 +409,7 @@ Senior Tester zichtbaar: True
 **Conclusie:** De gewijzigde functietitel is zichtbaar in het profiel van het talent.
 
 **Bewijs:**
-![TC-017 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc017-geslaagd.png)
+![TC-017 geslaagd](screenshots/tc017-geslaagd.png)
 
 ---
 
@@ -429,7 +429,7 @@ Werkervaring succesvol verwijderd na opslaan. Bevestigingsdialoog aanwezig voor 
 **Conclusie:** Het verwijderen van werkervaring werkt correct.
 
 **Bewijs:**
-![TC-018 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc018-bevestiging.png)
+![TC-018 geslaagd](screenshots/tc018-bevestiging.png)
 
 
 ---
@@ -450,7 +450,7 @@ Opleiding zichtbaar: True
 **Conclusie:** De opleiding is zichtbaar in het profiel van het talent.
 
 **Bewijs:**
-![TC-019 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc019-geslaagd.png)
+![TC-019 geslaagd](screenshots/tc019-geslaagd.png)
 <!-- GENERATED:DETAILS:END -->
 
 ---
@@ -503,7 +503,7 @@ Opleiding zichtbaar: True
 
 **Werkelijk:** Na het uitvoeren van de actie verdwijnt het formulier zonder zichtbare bevestiging. Het is voor de beheerder niet direct duidelijk of de actie geslaagd is.
 
-![TC-013 redirect](uitwerking/deelopdracht-7-testrapportage/screenshots/tc013-redirect.png)
+![TC-013 redirect](screenshots/tc013-redirect.png)
 
 **SRS-eis:** Niet expliciet vastgelegd, maar strijdig met basale gebruikersverwachtingen rondom feedbackmechanismen bij formulierverwerking.
 
@@ -523,7 +523,7 @@ Opleiding zichtbaar: True
 
 **SRS-eis:** Niet expliciet vastgelegd, maar strijdig met basale bruikbaarheidseisen voor beheerschermen.
 
-![F-004 delete-knop afgesneden](uitwerking/deelopdracht-7-testrapportage/screenshots/tc015-geslaagd.png)
+![F-004 delete-knop afgesneden](screenshots/tc015-geslaagd.png)
 
 ---
 
