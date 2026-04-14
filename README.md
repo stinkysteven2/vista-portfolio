@@ -34,8 +34,8 @@ Na het voltooien van deze module ben ik in staat om:
 - [x] Deelopdracht 3 — Functioneel en niet-functioneel testen
 - [x] Deelopdracht 4 — AI en testcases
 - [x] Deelopdracht 5 — Scope van het testen
-- [ ] Deelopdracht 6 — Testplan
-- [ ] Deelopdracht 7 — Testrapportage
+- [x] Deelopdracht 6 — Testplan
+- [x] Deelopdracht 7 — Testrapportage
 - [ ] Deelopdracht 8 — Verbetervoorstellen
 - [ ] Deelopdracht 9 — Prioritiseren verbetervoorstellen
 - [ ] Deelopdracht 10 — Communicatie verbetervoorstellen

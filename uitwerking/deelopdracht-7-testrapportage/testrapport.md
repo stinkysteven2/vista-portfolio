@@ -39,29 +39,29 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 <!-- GENERATED:OVERZICHT:START -->
 | TC-ID | Omschrijving | Eis | Prioriteit | Status | Uitgevoerd om |
 |---|---|---|---|---|---|
-| [TC-001](#tc-001--detail) | Inloggen met geldige gegevens | FE1 | Hoog | **GESLAAGD** | 2026-04-03 12:24:19 |
-| [TC-002](#tc-002--detail) | Inloggen met onjuist wachtwoord | FE1 | Hoog | **GESLAAGD** | 2026-04-03 12:24:25 |
-| [TC-003](#tc-003--detail) | Inloggen met onbekend e-mailadres | FE1 | Gemiddeld | **GESLAAGD** | 2026-03-27 11:55:48 |
-| [TC-004](#tc-004--detail) | Uitloggen | FE2 | Hoog | **GESLAAGD** | 2026-04-03 12:24:31 |
-| [TC-005](#tc-005--detail) | Sessie beëindigd na uitloggen | FE2 | Hoog | **GESLAAGD** | 2026-04-03 12:32:43 |
-| [TC-006](#tc-006--detail) | Talentprofiel afgeschermd voor bezoekers | FE3 | Hoog | **GESLAAGD** | 2026-04-09 10:41:33 |
-| [TC-007](#tc-007--detail) | Admin panel toegankelijkheid per rol | FE3 | Hoog | **GESLAAGD** | 2026-04-09 10:54:03 |
-| [TC-008](#tc-008--detail) | Filteren op provincie | FE4 | Hoog | **GESLAAGD** | 2026-04-09 11:13:54 |
-| [TC-009](#tc-009--detail) | Filteren op beschikbaarheid (grenswaarden) | FE4 | Hoog | **GESLAAGD** | 2026-04-09 11:16:13 |
-| [TC-010](#tc-010--detail) | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | FE5 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
-| [TC-011](#tc-011--detail) | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | FE5 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
-| [TC-012](#tc-012--detail) | IDOR — talentprofiel via URL-manipulatie | NFE1/NFE3 | Hoog | **GESLAAGD** | 2026-04-10 09:01:57 |
-| [TC-013](#tc-013--detail) | Talent aanmaken | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
-| [TC-014](#tc-014--detail) | Talent bewerken | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
-| [TC-015](#tc-015--detail) | Talent verwijderen | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
-| [TC-016](#tc-016--detail) | Werkervaring toevoegen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:18 |
-| [TC-017](#tc-017--detail) | Werkervaring bewerken | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:36 |
-| [TC-018](#tc-018--detail) | Werkervaring verwijderen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-14 00:00:00 |
-| [TC-019](#tc-019--detail) | Opleiding toevoegen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:55 |
+| [TC-001](#tc-001--inloggen-met-geldige-gegevens) | Inloggen met geldige gegevens | FE1 | Hoog | **GESLAAGD** | 2026-04-03 12:24:19 |
+| [TC-002](#tc-002--inloggen-met-onjuist-wachtwoord) | Inloggen met onjuist wachtwoord | FE1 | Hoog | **GESLAAGD** | 2026-04-03 12:24:25 |
+| [TC-003](#tc-003--inloggen-met-onbekend-e-mailadres) | Inloggen met onbekend e-mailadres | FE1 | Gemiddeld | **GESLAAGD** | 2026-03-27 11:55:48 |
+| [TC-004](#tc-004--uitloggen) | Uitloggen | FE2 | Hoog | **GESLAAGD** | 2026-04-03 12:24:31 |
+| [TC-005](#tc-005--sessie-beëindigd-na-uitloggen) | Sessie beëindigd na uitloggen | FE2 | Hoog | **GESLAAGD** | 2026-04-03 12:32:43 |
+| [TC-006](#tc-006--talentprofiel-afgeschermd-voor-bezoekers) | Talentprofiel afgeschermd voor bezoekers | FE3 | Hoog | **GESLAAGD** | 2026-04-09 10:41:33 |
+| [TC-007](#tc-007--admin-panel-toegankelijkheid-per-rol) | Admin panel toegankelijkheid per rol | FE3 | Hoog | **GESLAAGD** | 2026-04-09 10:54:03 |
+| [TC-008](#tc-008--filteren-op-provincie) | Filteren op provincie | FE4 | Hoog | **GESLAAGD** | 2026-04-09 11:13:54 |
+| [TC-009](#tc-009--filteren-op-beschikbaarheid-grenswaarden) | Filteren op beschikbaarheid (grenswaarden) | FE4 | Hoog | **GESLAAGD** | 2026-04-09 11:16:13 |
+| [TC-010](#tc-010--talentprofiel-volledig-zichtbaar-voor-ingelogde-gebruiker) | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | FE5 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-011](#tc-011--talentprofiel-gedeeltelijk-zichtbaar-voor-bezoeker) | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | FE5 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-012](#tc-012--idor--talentprofiel-via-url-manipulatie) | IDOR — talentprofiel via URL-manipulatie | NFE1/NFE3 | Hoog | **GESLAAGD** | 2026-04-10 09:01:57 |
+| [TC-013](#tc-013--talent-aanmaken) | Talent aanmaken | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-014](#tc-014--talent-bewerken) | Talent bewerken | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-015](#tc-015--talent-verwijderen) | Talent verwijderen | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-016](#tc-016--werkervaring-toevoegen) | Werkervaring toevoegen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:18 |
+| [TC-017](#tc-017--werkervaring-bewerken) | Werkervaring bewerken | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:36 |
+| [TC-018](#tc-018--werkervaring-verwijderen) | Werkervaring verwijderen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-14 00:00:00 |
+| [TC-019](#tc-019--opleiding-toevoegen) | Opleiding toevoegen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:55 |
 <!-- GENERATED:OVERZICHT:END -->
 
 <!-- GENERATED:DETAILS:START -->
-### TC-001 — Detail
+### TC-001 — Inloggen met geldige gegevens
 
 **Teststappen:**
 1. Navigeer naar de startpagina (`/talent`)
@@ -74,8 +74,8 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 
 **Werkelijk resultaat:**
 - URL: https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent
-- Logout zichtbaar: True
-- Login zichtbaar: False
+- Logout zichtbaar: ✔️
+- Login zichtbaar: ❌
 
 **Conclusie:** Inloggen werkt correct. De applicatie stuurt de gebruiker terug naar de startpagina en toont het logout-icoon.
 
@@ -84,7 +84,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 
 ---
 
-### TC-002 — Detail
+### TC-002 — Inloggen met onjuist wachtwoord
 
 **Teststappen:**
 1. Navigeer naar de startpagina (`/talent`) — frisse sessie (niet ingelogd)
@@ -106,7 +106,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 
 ---
 
-### TC-003 — Detail
+### TC-003 — Inloggen met onbekend e-mailadres
 
 **Teststappen:**
 1. Navigeer naar de startpagina (`/talent`) — handmatig, Firefox
@@ -128,7 +128,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 
 ---
 
-### TC-004 — Detail
+### TC-004 — Uitloggen
 
 **Teststappen:**
 1. Log in met geldige gegevens (zie TC-001)
@@ -137,8 +137,8 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 **Verwacht resultaat:** Login-icoon zichtbaar; logout-icoon verdwenen
 
 **Werkelijk resultaat:**
-- Login zichtbaar: True
-- Logout zichtbaar: False
+- Login zichtbaar: ✔️
+- Logout zichtbaar: ❌
 
 **Conclusie:** Uitloggen werkt correct. De applicatie toont het login-icoon en verbergt het logout-icoon.
 
@@ -147,7 +147,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 
 ---
 
-### TC-005 — Detail
+### TC-005 — Sessie beëindigd na uitloggen
 
 **Teststappen:**
 1. Log in met geldige gegevens (zie TC-001)
@@ -159,9 +159,9 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 
 **Werkelijk resultaat:**
 - URL: https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent
-- Nog op profiel: False
-- Logout zichtbaar: False
-- Login CTA zichtbaar: False
+- Nog op profiel: ❌
+- Logout zichtbaar: ❌
+- Login CTA zichtbaar: ❌
 
 **Conclusie:** Na uitloggen stuurt de terugknop de gebruiker niet terug naar het talentprofiel maar naar de startpagina. De applicatie beëindigt de sessie correct en voorkomt actief toegang tot beschermde content.
 
@@ -170,7 +170,7 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 
 ---
 
-### TC-006 — Detail
+### TC-006 — Talentprofiel afgeschermd voor bezoekers
 
 **Teststappen:**
 1. Zorg dat je niet ingelogd bent
@@ -188,7 +188,7 @@ De getoonde informatie is niet te herleiden tot een persoon.
 
 ---
 
-### TC-007 — Detail
+### TC-007 — Admin panel toegankelijkheid per rol
 
 **Teststappen:**
 1. Navigeer als bezoeker (niet ingelogd) naar `/admin`
@@ -198,9 +198,9 @@ De getoonde informatie is niet te herleiden tot een persoon.
 **Verwacht resultaat:** Bezoeker en niet-admin omgeleid; beheerder heeft toegang
 
 **Werkelijk resultaat:**
-- Bezoeker geblokkeerd: True
-- Niet-admin geblokkeerd: True
-- Beheerder heeft toegang: True
+- Bezoeker geblokkeerd: ✔️
+- Niet-admin geblokkeerd: ✔️
+- Beheerder heeft toegang: ✔️
 
 **Conclusie:** Alleen de beheerder heeft toegang tot het admin panel. Bezoekers en niet-admin gebruikers worden omgeleid.
 
@@ -209,7 +209,7 @@ De getoonde informatie is niet te herleiden tot een persoon.
 
 ---
 
-### TC-008 — Detail
+### TC-008 — Filteren op provincie
 
 **Teststappen:**
 1. Navigeer naar de talentenpagina (`/talent`)
@@ -230,7 +230,7 @@ De getoonde informatie is niet te herleiden tot een persoon.
 
 ---
 
-### TC-009 — Detail
+### TC-009 — Filteren op beschikbaarheid (grenswaarden)
 
 **Teststappen:**
 1. Navigeer naar de talentenpagina (`/talent`)
@@ -251,7 +251,7 @@ De getoonde informatie is niet te herleiden tot een persoon.
 
 ---
 
-### TC-010 — Detail
+### TC-010 — Talentprofiel volledig zichtbaar voor ingelogde gebruiker
 
 **Teststappen:**
 1. Log in met geldige gegevens (zie TC-001)
@@ -269,7 +269,7 @@ Volledige attributenset zichtbaar: naam, karakterkenmerken en kernkwaliteiten
 
 ---
 
-### TC-011 — Detail
+### TC-011 — Talentprofiel gedeeltelijk zichtbaar voor bezoeker
 
 **Teststappen:**
 1. Zorg dat je niet ingelogd bent
@@ -287,7 +287,7 @@ Geen herleidbare persoonsgegevens zichtbaar voor niet-ingelogde bezoeker
 
 ---
 
-### TC-012 — Detail
+### TC-012 — IDOR — talentprofiel via URL-manipulatie
 
 **Teststappen:**
 1. Zorg dat je niet ingelogd bent
@@ -309,7 +309,7 @@ Geen herleidbare persoonsgegevens zichtbaar voor niet-ingelogde bezoeker
 
 ---
 
-### TC-013 — Detail
+### TC-013 — Talent aanmaken
 
 **Teststappen:**
 1. Log in als beheerder (zie TC-001)
@@ -330,7 +330,7 @@ Talent 'Test Talent' succesvol aangemaakt en zichtbaar in de lijst. Geen bevesti
 
 ---
 
-### TC-014 — Detail
+### TC-014 — Talent bewerken
 
 **Teststappen:**
 1. Log in als beheerder (zie TC-001)
@@ -351,7 +351,7 @@ Wijziging correct opgeslagen en zichtbaar
 
 ---
 
-### TC-015 — Detail
+### TC-015 — Talent verwijderen
 
 **Teststappen:**
 1. Log in als beheerder (zie TC-001)
@@ -371,7 +371,7 @@ Talent succesvol verwijderd. Bevestigingsdialoog aanwezig voor verwijdering.
 
 ---
 
-### TC-016 — Detail
+### TC-016 — Werkervaring toevoegen
 
 **Teststappen:**
 1. Log in als beheerder en navigeer naar `/admin/talenten`
@@ -383,8 +383,8 @@ Talent succesvol verwijderd. Bevestigingsdialoog aanwezig voor verwijdering.
 **Verwacht resultaat:** Werkervaring 'Test BV / Tester' zichtbaar na opslaan
 
 **Werkelijk resultaat:**
-- Test BV zichtbaar: True
-- Tester zichtbaar: True
+- Test BV zichtbaar: ✔️
+- Tester zichtbaar: ✔️
 
 **Conclusie:** De werkervaring is zichtbaar in het profiel van het talent.
 
@@ -393,7 +393,7 @@ Talent succesvol verwijderd. Bevestigingsdialoog aanwezig voor verwijdering.
 
 ---
 
-### TC-017 — Detail
+### TC-017 — Werkervaring bewerken
 
 **Teststappen:**
 1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met werkervaring
@@ -404,7 +404,7 @@ Talent succesvol verwijderd. Bevestigingsdialoog aanwezig voor verwijdering.
 **Verwacht resultaat:** Functietitel gewijzigd naar 'Senior Tester'
 
 **Werkelijk resultaat:**
-Senior Tester zichtbaar: True
+Senior Tester zichtbaar: ✔️
 
 **Conclusie:** De gewijzigde functietitel is zichtbaar in het profiel van het talent.
 
@@ -413,7 +413,7 @@ Senior Tester zichtbaar: True
 
 ---
 
-### TC-018 — Detail
+### TC-018 — Werkervaring verwijderen
 
 **Teststappen:**
 1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met werkervaring
@@ -434,7 +434,7 @@ Werkervaring succesvol verwijderd na opslaan. Bevestigingsdialoog aanwezig voor 
 
 ---
 
-### TC-019 — Detail
+### TC-019 — Opleiding toevoegen
 
 **Teststappen:**
 1. Log in als beheerder en navigeer naar het bewerkscherm van een talent
@@ -445,7 +445,7 @@ Werkervaring succesvol verwijderd na opslaan. Bevestigingsdialoog aanwezig voor 
 **Verwacht resultaat:** Opleiding 'Software Developer / Test ROC' zichtbaar na opslaan
 
 **Werkelijk resultaat:**
-Opleiding zichtbaar: True
+Opleiding zichtbaar: ✔️
 
 **Conclusie:** De opleiding is zichtbaar in het profiel van het talent.
 
