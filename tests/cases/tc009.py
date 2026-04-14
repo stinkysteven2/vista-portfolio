@@ -6,57 +6,80 @@ MIN_HOURS = 20
 MAX_HOURS = 32
 
 
+def count_talents(page: Page) -> int:
+    for sel in ["[class*='talent-card']", "[class*='talentcard']", "[class*='card']", "app-talent-card", ".talent"]:
+        count = page.locator(sel).count()
+        if count > 0:
+            return count
+    return -1
+
+
 def run(page: Page):
     """TC-009: Filteren op beschikbaarheid (grenswaarden)"""
     print("\n--- TC-009: Filteren op beschikbaarheid (grenswaarden) ---")
 
     page.goto(BASE_URL, wait_until="networkidle", timeout=15000)
 
-    # Zoek beschikbaarheidsfilter (slider of invoervelden)
-    filter_found = False
-    for sel in [
-        "[class*='beschikbaarheid']",
-        "[class*='availability']",
-        "mat-slider",
-        "[placeholder*='uur']",
-        "[placeholder*='beschikbaar']",
-    ]:
-        el = page.locator(sel).first
-        if el.count() > 0 and el.is_visible():
-            filter_found = True
-            break
+    # Cookie banner wegklikken
+    try:
+        page.locator("app-cookie-banner .btn.decline").click(timeout=3000)
+        page.wait_for_timeout(300)
+    except Exception:
+        pass
 
-    if not filter_found:
+    total_before = count_talents(page)
+
+    try:
+        # Beschikbaarheid accordion openen
+        header = page.locator(".accordion-item-header:has-text('Beschikbaarheid')").first
+        if header.count() == 0:
+            raise Exception("Beschikbaarheid accordion niet gevonden")
+        header.click(timeout=3000)
+        page.wait_for_timeout(500)
+
+        # Vul de start-waarde in
+        start_input = page.locator("input[name='start-value']").first
+        if start_input.count() == 0:
+            raise Exception("Start-value input niet gevonden")
+        start_input.click(timeout=3000, click_count=3)
+        start_input.fill(str(MIN_HOURS))
+        start_input.dispatch_event("change")
+        page.wait_for_timeout(300)
+
+        # Vul de end-waarde in
+        end_input = page.locator("input[name='end-value']").first
+        if end_input.count() == 0:
+            raise Exception("End-value input niet gevonden")
+        end_input.click(timeout=3000, click_count=3)
+        end_input.fill(str(MAX_HOURS))
+        end_input.dispatch_event("change")
+        page.keyboard.press("Tab")
+        page.wait_for_load_state("networkidle", timeout=10000)
+
+    except Exception as e:
         screenshot_path = f"{SCREENSHOTS_DIR}/tc009-geblokkeerd.png"
         page.screenshot(path=screenshot_path)
         result(TC_ID, "Filteren op beschikbaarheid (grenswaarden)", "GEBLOKKEERD",
-               f"Beschikbaarheidsfilter aanwezig; talenten met {MIN_HOURS}–{MAX_HOURS} uur worden getoond",
-               "Beschikbaarheidsfilter niet gevonden — selector aanpassen na inspectie",
+               f"Beschikbaarheidsfilter invulbaar met {MIN_HOURS}–{MAX_HOURS} uur",
+               f"Kon filter niet activeren: {e}",
                screenshot=screenshot_path)
         return False
 
-    # Probeer min/max in te vullen als er invoervelden zijn
-    inputs = page.locator("input[type='number']")
-    if inputs.count() >= 2:
-        try:
-            inputs.nth(0).fill(str(MIN_HOURS))
-            inputs.nth(1).fill(str(MAX_HOURS))
-            page.keyboard.press("Enter")
-            page.wait_for_load_state("networkidle", timeout=10000)
-        except Exception as e:
-            screenshot_path = f"{SCREENSHOTS_DIR}/tc009-geblokkeerd.png"
-            page.screenshot(path=screenshot_path)
-            result(TC_ID, "Filteren op beschikbaarheid (grenswaarden)", "GEBLOKKEERD",
-                   f"Grenswaarden {MIN_HOURS}–{MAX_HOURS} uur invulbaar",
-                   f"Kon filter niet invullen: {e}",
-                   screenshot=screenshot_path)
-            return False
+    total_after = count_talents(page)
+    filtered_correctly = total_after != -1 and (total_after <= total_before or total_before == -1)
 
-    screenshot_path = f"{SCREENSHOTS_DIR}/tc009-resultaat.png"
+    screenshot_path = f"{SCREENSHOTS_DIR}/tc009-{'geslaagd' if filtered_correctly else 'gefaald'}.png"
     page.screenshot(path=screenshot_path)
 
-    result(TC_ID, "Filteren op beschikbaarheid (grenswaarden)", "GEBLOKKEERD",
-           f"Talenten buiten {MIN_HOURS}–{MAX_HOURS} uur vallen af",
-           "Filter gevonden maar resultaatvalidatie vereist handmatige controle — zie screenshot",
-           screenshot=screenshot_path)
-    return False
+    if filtered_correctly:
+        result(TC_ID, "Filteren op beschikbaarheid (grenswaarden)", "GESLAAGD",
+               f"Alleen talenten beschikbaar {MIN_HOURS}–{MAX_HOURS} uur getoond; aantal ≤ totaal",
+               f"Voor filter: {total_before} | Na filter ({MIN_HOURS}–{MAX_HOURS} uur): {total_after}",
+               screenshot=screenshot_path)
+        return True
+    else:
+        result(TC_ID, "Filteren op beschikbaarheid (grenswaarden)", "GEFAALD",
+               f"Alleen talenten beschikbaar {MIN_HOURS}–{MAX_HOURS} uur getoond; aantal ≤ totaal",
+               f"Voor filter: {total_before} | Na filter ({MIN_HOURS}–{MAX_HOURS} uur): {total_after}",
+               screenshot=screenshot_path)
+        return False

@@ -2,7 +2,7 @@ from helpers import result, BASE_URL, SCREENSHOTS_DIR
 from playwright.sync_api import Page
 
 TC_ID = "TC-008"
-FILTER_PROVINCE = "Noord-Brabant"
+FILTER_PROVINCE = "Gelderland"
 
 
 def count_talents(page: Page) -> int:
@@ -20,37 +20,31 @@ def run(page: Page):
 
     page.goto(BASE_URL, wait_until="networkidle", timeout=15000)
 
-    # Tel ongefilterden talenten
+    # Cookie banner wegklikken indien aanwezig
+    try:
+        page.locator("app-cookie-banner .btn.decline").click(timeout=3000)
+        page.wait_for_timeout(300)
+    except Exception:
+        pass
+
+    # Tel ongefilterde talenten
     total_before = count_talents(page)
 
-    # Zoek het provinciefilter
-    province_filter = None
-    for sel in [
-        f"mat-select:has-text('Provincie')",
-        f"select:has-text('Provincie')",
-        "[placeholder*='rovincie']",
-        "[class*='province']",
-        "[class*='filter'] select",
-        "mat-select",
-    ]:
-        el = page.locator(sel).first
-        if el.count() > 0 and el.is_visible():
-            province_filter = el
-            break
-
-    if province_filter is None:
-        screenshot_path = f"{SCREENSHOTS_DIR}/tc008-geblokkeerd.png"
-        page.screenshot(path=screenshot_path)
-        result(TC_ID, "Filteren op provincie", "GEBLOKKEERD",
-               f"Provinciefilter aanwezig en filterbaar op {FILTER_PROVINCE}",
-               "Provinciefilter niet gevonden — selector aanpassen na inspectie",
-               screenshot=screenshot_path)
-        return False
-
     try:
-        province_filter.click(timeout=3000)
-        page.locator(f"mat-option:has-text('{FILTER_PROVINCE}'), option:has-text('{FILTER_PROVINCE}')").first.click(timeout=3000)
+        # Provincie accordion openen (zit al in de sidebar, geen extra panel nodig)
+        provincie_header = page.locator(".accordion-item-header:has-text('Provincie')").first
+        if provincie_header.count() == 0:
+            raise Exception("Provincie accordion header niet gevonden")
+        provincie_header.click(timeout=3000)
+        page.wait_for_timeout(500)
+
+        # Klik de provincie radio button
+        radio = page.locator(f"mat-radio-button:has-text('{FILTER_PROVINCE}')").first
+        if radio.count() == 0:
+            raise Exception(f"Radio button '{FILTER_PROVINCE}' niet gevonden")
+        radio.click(timeout=3000)
         page.wait_for_load_state("networkidle", timeout=10000)
+
     except Exception as e:
         screenshot_path = f"{SCREENSHOTS_DIR}/tc008-geblokkeerd.png"
         page.screenshot(path=screenshot_path)

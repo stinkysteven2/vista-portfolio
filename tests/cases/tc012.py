@@ -12,11 +12,17 @@ PERSONAL_DATA_SELECTORS = [
     "[class*='email']",
 ]
 
+# Scope tot de profielcomponent — footer-links (helpdesk) mogen niet meetellen
+PROFILE_SCOPE = "app-talentprofile"
+
 
 def has_personal_data(page: Page) -> bool:
+    scope = page.locator(PROFILE_SCOPE).first
+    if scope.count() == 0:
+        return False
     for sel in PERSONAL_DATA_SELECTORS:
         try:
-            el = page.locator(sel).first
+            el = scope.locator(sel).first
             if el.count() > 0 and el.is_visible():
                 return True
         except Exception:

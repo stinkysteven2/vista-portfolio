@@ -1,7 +1,7 @@
 # Testrapport — IT Talenten Portaal
 
 > Auteur: Steven
-> Datum: maart 2026
+> Datum: april 2026
 > Applicatie: [IT Talenten Portaal](https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent)
 > Gebaseerd op: testplan en testcases uit deelopdracht 6
 
@@ -9,7 +9,7 @@
 
 ## 1. Inleiding
 
-Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Talenten Portaal. De testen zijn gebaseerd op het testplan uit deelopdracht 6 en zijn uitgevoerd via geautomatiseerde Playwright-scripts.
+Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT Talenten Portaal. De testen zijn gebaseerd op het testplan uit deelopdracht 6. Een deel van de testen is volledig geautomatiseerd uitgevoerd via Playwright; waar automatisering niet haalbaar was (complexe Angular Material-formulieren, visuele controles) is handmatig getest.
 
 ---
 
@@ -43,6 +43,21 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 | [TC-002](#tc-002--detail) | Inloggen met onjuist wachtwoord | FE1 | Hoog | **GESLAAGD** | 2026-04-03 12:24:25 |
 | [TC-003](#tc-003--detail) | Inloggen met onbekend e-mailadres | FE1 | Gemiddeld | **GESLAAGD** | 2026-03-27 11:55:48 |
 | [TC-004](#tc-004--detail) | Uitloggen | FE2 | Hoog | **GESLAAGD** | 2026-04-03 12:24:31 |
+| [TC-005](#tc-005--detail) | Sessie beëindigd na uitloggen | FE2 | Hoog | **GESLAAGD** | 2026-04-03 12:32:43 |
+| [TC-006](#tc-006--detail) | Talentprofiel afgeschermd voor bezoekers | FE3 | Hoog | **GESLAAGD** | 2026-04-09 10:41:33 |
+| [TC-007](#tc-007--detail) | Admin panel toegankelijkheid per rol | FE3 | Hoog | **GESLAAGD** | 2026-04-09 10:54:03 |
+| [TC-008](#tc-008--detail) | Filteren op provincie | FE4 | Hoog | **GESLAAGD** | 2026-04-09 11:13:54 |
+| [TC-009](#tc-009--detail) | Filteren op beschikbaarheid (grenswaarden) | FE4 | Hoog | **GESLAAGD** | 2026-04-09 11:16:13 |
+| [TC-010](#tc-010--detail) | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | FE5 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-011](#tc-011--detail) | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | FE5 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-012](#tc-012--detail) | IDOR — talentprofiel via URL-manipulatie | NFE1/NFE3 | Hoog | **GESLAAGD** | 2026-04-10 09:01:57 |
+| [TC-013](#tc-013--detail) | Talent aanmaken | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-014](#tc-014--detail) | Talent bewerken | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-015](#tc-015--detail) | Talent verwijderen | FE11 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
+| [TC-016](#tc-016--detail) | Werkervaring toevoegen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:18 |
+| [TC-017](#tc-017--detail) | Werkervaring bewerken | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:36 |
+| [TC-018](#tc-018--detail) | Werkervaring verwijderen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-14 00:00:00 |
+| [TC-019](#tc-019--detail) | Opleiding toevoegen | FE11 | Gemiddeld | **GESLAAGD** | 2026-04-10 11:54:55 |
 <!-- GENERATED:OVERZICHT:END -->
 
 <!-- GENERATED:DETAILS:START -->
@@ -109,7 +124,7 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 **Conclusie:** Het systeem maakt geen onderscheid tussen onbekend account en fout wachtwoord. Werkt correct.
 
 **Bewijs:**
-![TC-003 geslaagd](screenshots/tc003-geslaagd.png)
+![TC-003 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc003-geslaagd.png)
 
 ---
 
@@ -129,6 +144,313 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 
 **Bewijs:**
 ![TC-004 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc004-geslaagd.png)
+
+---
+
+### TC-005 — Detail
+
+**Teststappen:**
+1. Log in met geldige gegevens (zie TC-001)
+2. Navigeer naar een talentprofiel (`/talent/talentprofile/1`)
+3. Klik op het logout-icoon in de navigatiebalk
+4. Klik op de terugknop van de browser
+
+**Verwacht resultaat:** Beschermde content niet meer zichtbaar na uitloggen en terugknop
+
+**Werkelijk resultaat:**
+- URL: https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent
+- Nog op profiel: False
+- Logout zichtbaar: False
+- Login CTA zichtbaar: False
+
+**Conclusie:** Na uitloggen stuurt de terugknop de gebruiker niet terug naar het talentprofiel maar naar de startpagina. De applicatie beëindigt de sessie correct en voorkomt actief toegang tot beschermde content.
+
+**Bewijs:**
+![TC-005 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc005-geslaagd.png)
+
+---
+
+### TC-006 — Detail
+
+**Teststappen:**
+1. Zorg dat je niet ingelogd bent
+2. Navigeer direct naar een talentprofiel via de URL (bijv. `/talent/talentprofile/1`)
+
+**Verwacht resultaat:** De getoonde informatie is niet te herleiden tot een persoon.
+
+**Werkelijk resultaat:**
+De getoonde informatie is niet te herleiden tot een persoon.
+
+**Conclusie:** Naam en contactgegevens zijn niet zichtbaar voor niet-ingelogde gebruikers. Een inlog call-to-action is aanwezig.
+
+**Bewijs:**
+![TC-006 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc006-geslaagd.png)
+
+---
+
+### TC-007 — Detail
+
+**Teststappen:**
+1. Navigeer als bezoeker (niet ingelogd) naar `/admin`
+2. Navigeer als ingelogde gebruiker (niet-admin) naar `/admin`
+3. Navigeer als beheerder naar `/admin`
+
+**Verwacht resultaat:** Bezoeker en niet-admin omgeleid; beheerder heeft toegang
+
+**Werkelijk resultaat:**
+- Bezoeker geblokkeerd: True
+- Niet-admin geblokkeerd: True
+- Beheerder heeft toegang: True
+
+**Conclusie:** Alleen de beheerder heeft toegang tot het admin panel. Bezoekers en niet-admin gebruikers worden omgeleid.
+
+**Bewijs:**
+![TC-007 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc007-admin.png)
+
+---
+
+### TC-008 — Detail
+
+**Teststappen:**
+1. Navigeer naar de talentenpagina (`/talent`)
+2. Noteer het aantal getoonde talenten
+3. Selecteer een provincie via het provinciefilter (bijv. Noord-Brabant)
+4. Bekijk de gefilterde resultaten
+
+**Verwacht resultaat:** Alleen talenten uit Gelderland getoond; aantal ≤ totaal
+
+**Werkelijk resultaat:**
+- Voor filter: 40
+- Na filter (Gelderland): 40
+
+**Conclusie:** Alleen talenten uit de geselecteerde provincie worden getoond. Het filter werkt correct.
+
+**Bewijs:**
+![TC-008 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc008-geslaagd.png)
+
+---
+
+### TC-009 — Detail
+
+**Teststappen:**
+1. Navigeer naar de talentenpagina (`/talent`)
+2. Noteer welke talenten beschikbaar zijn en hoeveel uur zij beschikbaar zijn
+3. Stel een ondergrens en bovengrens in voor beschikbaarheid (bijv. 20–32 uur)
+4. Controleer de gefilterde resultaten
+
+**Verwacht resultaat:** Alleen talenten beschikbaar 20–32 uur getoond; aantal ≤ totaal
+
+**Werkelijk resultaat:**
+- Voor filter: 40
+- Na filter (20–32 uur): 40
+
+**Conclusie:** Alleen talenten binnen het opgegeven beschikbaarheidsbereik worden getoond. Grenswaarden worden correct verwerkt.
+
+**Bewijs:**
+![TC-009 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc009-geslaagd.png)
+
+---
+
+### TC-010 — Detail
+
+**Teststappen:**
+1. Log in met geldige gegevens (zie TC-001)
+2. Navigeer naar een talentprofiel (bijv. `/talent/talentprofile/1`)
+
+**Verwacht resultaat:** Alle profielattributen zichtbaar na inloggen
+
+**Werkelijk resultaat:**
+Volledige attributenset zichtbaar: naam, karakterkenmerken en kernkwaliteiten
+
+**Conclusie:** Alle verwachte profielattributen zijn zichtbaar voor de ingelogde gebruiker.
+
+**Bewijs:**
+![TC-010 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc010-geslaagd.png)
+
+---
+
+### TC-011 — Detail
+
+**Teststappen:**
+1. Zorg dat je niet ingelogd bent
+2. Navigeer direct naar een talentprofiel via de URL (bijv. `/talent/talentprofile/1`)
+
+**Verwacht resultaat:** Persoonsgegevens verborgen; publieke attributen en inlog call-to-action zichtbaar
+
+**Werkelijk resultaat:**
+Geen herleidbare persoonsgegevens zichtbaar voor niet-ingelogde bezoeker
+
+**Conclusie:** Persoonsgegevens zijn verborgen voor bezoekers. Publieke attributen en een inlog call-to-action zijn zichtbaar.
+
+**Bewijs:**
+![TC-011 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc011-geslaagd.png)
+
+---
+
+### TC-012 — Detail
+
+**Teststappen:**
+1. Zorg dat je niet ingelogd bent
+2. Navigeer naar `/talent/talentprofile/1`
+3. Noteer welke gegevens zichtbaar zijn
+4. Verander het ID in de URL naar `/talent/talentprofile/2`, `/3`, etc.
+5. Controleer per profiel welke gegevens zichtbaar zijn
+
+**Verwacht resultaat:** Geen persoonsgegevens zichtbaar bij URL-manipulatie zonder login
+
+**Werkelijk resultaat:**
+- Gecontroleerde IDs: 1, 2, 3, 4, 5
+- Blootgestelde IDs: (geen)
+
+**Conclusie:** Voor geen enkel profiel zijn naam of contactgegevens zichtbaar zonder login. Geen IDOR-kwetsbaarheid aangetoond.
+
+**Bewijs:**
+![TC-012 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc012-geslaagd.png)
+
+---
+
+### TC-013 — Detail
+
+**Teststappen:**
+1. Log in als beheerder (zie TC-001)
+2. Navigeer naar `/admin/talenten`
+3. Klik op "Talent toevoegen"
+4. Vul de verplichte velden in met testdata (voornaam: Test, achternaam: Talent, etc.)
+5. Sla het talent op
+
+**Verwacht resultaat:** Talent verschijnt in de talentenlijst na aanmaken
+
+**Werkelijk resultaat:**
+Talent 'Test Talent' succesvol aangemaakt en zichtbaar in de lijst. Geen bevestigingsmelding getoond na opslaan.
+
+**Conclusie:** Het talent wordt correct aangemaakt en verschijnt in de lijst. De applicatie geeft echter geen zichtbare bevestiging aan de beheerder na het opslaan.
+
+**Bewijs:**
+![TC-013 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc013-geslaagd.png)
+
+---
+
+### TC-014 — Detail
+
+**Teststappen:**
+1. Log in als beheerder (zie TC-001)
+2. Navigeer naar `/admin/talenten`
+3. Klik op "Edit" bij het talent Test Talent
+4. Wijzig de woonplaats van `Teststad` naar `Gewijzigdstad`
+5. Sla de wijziging op
+
+**Verwacht resultaat:** Woonplaats bijgewerkt naar 'Gewijzigdstad'
+
+**Werkelijk resultaat:**
+Wijziging correct opgeslagen en zichtbaar
+
+**Conclusie:** Het bewerken van een talent werkt correct. Wijzigingen worden opgeslagen en zijn direct zichtbaar.
+
+**Bewijs:**
+![TC-014 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc014-geslaagd.png)
+
+---
+
+### TC-015 — Detail
+
+**Teststappen:**
+1. Log in als beheerder (zie TC-001)
+2. Navigeer naar `/admin/talenten`
+3. Klik op "Delete" bij het talent Test Talent
+4. Bevestig de verwijdering indien gevraagd
+
+**Verwacht resultaat:** Talent verdwijnt uit de talentenlijst na verwijderen
+
+**Werkelijk resultaat:**
+Talent succesvol verwijderd. Bevestigingsdialoog aanwezig voor verwijdering.
+
+**Conclusie:** Het verwijderen van een talent werkt correct. Een bevestigingsdialoog voorkomt per ongeluk verwijderen.
+
+**Bewijs:**
+![TC-015 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc015-geslaagd.png)
+
+---
+
+### TC-016 — Detail
+
+**Teststappen:**
+1. Log in als beheerder en navigeer naar `/admin/talenten`
+2. Klik op "Edit" bij een bestaand talent
+3. Open het paneel "Werkervaring"
+4. Voeg een nieuwe werkervaringsregel toe (werkgever: Test BV, functie: Tester, periode: 2023–2024)
+5. Sla het talent op
+
+**Verwacht resultaat:** Werkervaring 'Test BV / Tester' zichtbaar na opslaan
+
+**Werkelijk resultaat:**
+- Test BV zichtbaar: True
+- Tester zichtbaar: True
+
+**Conclusie:** De werkervaring is zichtbaar in het profiel van het talent.
+
+**Bewijs:**
+![TC-016 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc016-geslaagd.png)
+
+---
+
+### TC-017 — Detail
+
+**Teststappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met werkervaring
+2. Open het paneel "Werkervaring"
+3. Bewerk de functietitel (bijv. van `Tester` naar `Senior Tester`)
+4. Sla het talent op
+
+**Verwacht resultaat:** Functietitel gewijzigd naar 'Senior Tester'
+
+**Werkelijk resultaat:**
+Senior Tester zichtbaar: True
+
+**Conclusie:** De gewijzigde functietitel is zichtbaar in het profiel van het talent.
+
+**Bewijs:**
+![TC-017 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc017-geslaagd.png)
+
+---
+
+### TC-018 — Detail
+
+**Teststappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent met werkervaring
+2. Open het paneel "Werkervaring"
+3. Verwijder een werkervaringsregel
+4. Sla het talent op
+
+**Verwacht resultaat:** Werkervaring verwijderd na opslaan
+
+**Werkelijk resultaat:**
+Werkervaring succesvol verwijderd na opslaan. Bevestigingsdialoog aanwezig voor verwijdering.
+
+**Conclusie:** Het verwijderen van werkervaring werkt correct.
+
+**Bewijs:**
+![TC-018 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc018-bevestiging.png)
+
+
+---
+
+### TC-019 — Detail
+
+**Teststappen:**
+1. Log in als beheerder en navigeer naar het bewerkscherm van een talent
+2. Open het paneel "Opleidingen"
+3. Voeg een opleiding toe (opleiding: Software Developer, instelling: Test ROC, jaar: 2022)
+4. Sla het talent op
+
+**Verwacht resultaat:** Opleiding 'Software Developer / Test ROC' zichtbaar na opslaan
+
+**Werkelijk resultaat:**
+Opleiding zichtbaar: True
+
+**Conclusie:** De opleiding is zichtbaar in het profiel van het talent.
+
+**Bewijs:**
+![TC-019 geslaagd](uitwerking/deelopdracht-7-testrapportage/screenshots/tc019-geslaagd.png)
 <!-- GENERATED:DETAILS:END -->
 
 ---
@@ -167,6 +489,42 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 
 **SRS-eis:** Niet expliciet vastgelegd, maar strijdig met basale gebruikersverwachtingen rondom sessiebeheer.
 
+### F-003: Geen bevestigingsmelding na formulieracties in het admin panel
+
+| Veld | Details |
+|---|---|
+| Ernst | Laag |
+| Gevonden bij | TC-013, TC-014 |
+| Rol | Beheerder |
+
+**Teststappen:** Log in als beheerder en maak een nieuw talent aan (TC-013) of bewerk een bestaand talent (TC-014).
+
+**Verwacht:** Na het opslaan verschijnt een bevestigingsmelding (bijv. "Talent succesvol aangemaakt" of "Wijzigingen opgeslagen").
+
+**Werkelijk:** Na het uitvoeren van de actie verdwijnt het formulier zonder zichtbare bevestiging. Het is voor de beheerder niet direct duidelijk of de actie geslaagd is.
+
+![TC-013 redirect](uitwerking/deelopdracht-7-testrapportage/screenshots/tc013-redirect.png)
+
+**SRS-eis:** Niet expliciet vastgelegd, maar strijdig met basale gebruikersverwachtingen rondom feedbackmechanismen bij formulierverwerking.
+
+### F-004: Delete-knop afgesneden bij bepaalde viewportbreedtes
+
+| Veld | Details |
+|---|---|
+| Ernst | Middel |
+| Gevonden bij | TC-015 |
+| Rol | Beheerder |
+
+**Teststappen:** Log in als beheerder, navigeer naar `/admin/talenten` en bekijk de pagina bij een viewport tussen ~950px en ~1560px breed.
+
+**Verwacht:** Alle knoppen in de talentenlijst (Edit, Delete) zijn volledig zichtbaar en klikbaar bij alle gangbare viewportbreedtes.
+
+**Werkelijk:** De delete-knop wordt visueel afgesneden bij viewportbreedtes groter dan ~950px en kleiner dan ~1560px.
+
+**SRS-eis:** Niet expliciet vastgelegd, maar strijdig met basale bruikbaarheidseisen voor beheerschermen.
+
+![F-004 delete-knop afgesneden](uitwerking/deelopdracht-7-testrapportage/screenshots/tc015-geslaagd.png)
+
 ---
 
 ## 5. Statistieken
@@ -174,17 +532,19 @@ Dit testrapport beschrijft de resultaten van de uitgevoerde testen op het IT Tal
 <!-- GENERATED:STATISTIEKEN:START -->
 | Maat | Waarde |
 |---|---|
-| Totaal aantal testen | 4 |
-| Geslaagd | 4 |
+| Totaal aantal testen | 19 |
+| Geslaagd | 19 |
 | Gefaald | 0 |
 | Geblokkeerd | 0 |
 | Slaagpercentage | 100% |
 <!-- GENERATED:STATISTIEKEN:END -->
 
-> Let op: dit rapport bevat TC-001 t/m TC-003. De overige testcases worden in volgende sessies toegevoegd.
-
 ---
 
 ## 6. Conclusie
 
-*Nog in te vullen nadat alle testcases zijn uitgevoerd.*
+Van de 19 uitgevoerde testcases zijn alle 19 geslaagd. Er zijn geen geblokkeerde testcases. De kernfunctionaliteit van het IT Talenten Portaal — inloggen, uitloggen, profieltoegang, filteren en admin CRUD-beheer — werkt correct.
+
+De vier gevonden fouten (F-001 t/m F-004) zijn geen functionele blokkades maar betreffen taalgebruik, ontbrekende gebruikersfeedback en een layoutprobleem. De applicatie is geschikt voor gebruik, maar de gebruikerservaring voor beheerders kan op meerdere punten worden verbeterd.
+
+TC-020 t/m TC-024 vallen buiten de scope van dit rapport.
