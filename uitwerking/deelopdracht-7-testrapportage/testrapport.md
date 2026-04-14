@@ -46,8 +46,8 @@ Dit testrapport beschrijft de resultaten van de 19 uitgevoerde testen op het IT 
 | [TC-005](#tc-005--sessie-beëindigd-na-uitloggen) | Sessie beëindigd na uitloggen | FE2 | Hoog | **GESLAAGD** | 2026-04-03 12:32:43 |
 | [TC-006](#tc-006--talentprofiel-afgeschermd-voor-bezoekers) | Talentprofiel afgeschermd voor bezoekers | FE3 | Hoog | **GESLAAGD** | 2026-04-09 10:41:33 |
 | [TC-007](#tc-007--admin-panel-toegankelijkheid-per-rol) | Admin panel toegankelijkheid per rol | FE3 | Hoog | **GESLAAGD** | 2026-04-09 10:54:03 |
-| [TC-008](#tc-008--filteren-op-provincie) | Filteren op provincie | FE4 | Hoog | **GESLAAGD** | 2026-04-09 11:13:54 |
-| [TC-009](#tc-009--filteren-op-beschikbaarheid-grenswaarden) | Filteren op beschikbaarheid (grenswaarden) | FE4 | Hoog | **GESLAAGD** | 2026-04-09 11:16:13 |
+| [TC-008](#tc-008--filteren-op-provincie) | Filteren op provincie | FE4 | Hoog | **GESLAAGD** | 2026-04-14 10:49:00 |
+| [TC-009](#tc-009--filteren-op-beschikbaarheid-grenswaarden) | Filteren op beschikbaarheid (grenswaarden) | FE4 | Hoog | **GESLAAGD** | 2026-04-14 10:50:00 |
 | [TC-010](#tc-010--talentprofiel-volledig-zichtbaar-voor-ingelogde-gebruiker) | Talentprofiel volledig zichtbaar voor ingelogde gebruiker | FE5 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
 | [TC-011](#tc-011--talentprofiel-gedeeltelijk-zichtbaar-voor-bezoeker) | Talentprofiel gedeeltelijk zichtbaar voor bezoeker | FE5 | Hoog | **GESLAAGD** | 2026-04-10 00:00:00 |
 | [TC-012](#tc-012--idor--talentprofiel-via-url-manipulatie) | IDOR — talentprofiel via URL-manipulatie | NFE1/NFE3 | Hoog | **GESLAAGD** | 2026-04-10 09:01:57 |
@@ -220,8 +220,8 @@ De getoonde informatie is niet te herleiden tot een persoon.
 **Verwacht resultaat:** Alleen talenten uit Gelderland getoond; aantal ≤ totaal
 
 **Werkelijk resultaat:**
-- Voor filter: 40
-- Na filter (Gelderland): 40
+- Voor filter: 46
+- Na filter (Gelderland): 2
 
 **Conclusie:** Alleen talenten uit de geselecteerde provincie worden getoond. Het filter werkt correct.
 
@@ -241,8 +241,8 @@ De getoonde informatie is niet te herleiden tot een persoon.
 **Verwacht resultaat:** Alleen talenten beschikbaar 20–32 uur getoond; aantal ≤ totaal
 
 **Werkelijk resultaat:**
-- Voor filter: 40
-- Na filter (20–32 uur): 40
+- Voor filter: 46
+- Na filter (20–32 uur): 8
 
 **Conclusie:** Alleen talenten binnen het opgegeven beschikbaarheidsbereik worden getoond. Grenswaarden worden correct verwerkt.
 

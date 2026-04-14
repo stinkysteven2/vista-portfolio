@@ -7,10 +7,15 @@ MAX_HOURS = 32
 
 
 def count_talents(page: Page) -> int:
-    for sel in ["[class*='talent-card']", "[class*='talentcard']", "[class*='card']", "app-talent-card", ".talent"]:
-        count = page.locator(sel).count()
-        if count > 0:
-            return count
+    """Lees het aantal talenten uit de 'Zoekresultaten (X)' kop."""
+    import re
+    try:
+        tekst = page.locator("h1:has-text('Zoekresultaten')").first.inner_text(timeout=5000)
+        match = re.search(r'\((\d+)\)', tekst)
+        if match:
+            return int(match.group(1))
+    except Exception:
+        pass
     return -1
 
 
@@ -55,6 +60,13 @@ def run(page: Page):
         end_input.dispatch_event("change")
         page.keyboard.press("Tab")
         page.wait_for_load_state("networkidle", timeout=10000)
+
+        # Wacht tot Zoekresultaten-teller verandert (Angular update)
+        page.wait_for_function(
+            "before => { const h1 = document.querySelector('h1'); const m = h1 && h1.innerText.match(/\\((\\d+)\\)/); return m && parseInt(m[1]) !== before; }",
+            arg=total_before,
+            timeout=5000
+        )
 
     except Exception as e:
         screenshot_path = f"{SCREENSHOTS_DIR}/tc009-geblokkeerd.png"
