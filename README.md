@@ -50,7 +50,18 @@ Na het voltooien van deze module ben ik in staat om:
 
 ## Gebruikte tools & technieken
 
-_(wordt aangevuld naarmate de module vordert)_
+| Tool / Techniek | Toepassing |
+|---|---|
+| **Playwright (Python)** | Geautomatiseerd testen en crawlen van het IT Talenten Portaal |
+| **Keycloak** | Authenticatie van testgebruikers tijdens geautomatiseerde testen |
+| **Firefox** | Handmatig testen |
+| **Chromium (headless)** | Geautomatiseerd testen via Playwright |
+| **Git / GitHub** | Versiebeheer en oplevering van het portfolio |
+| **Markdown** | Documentatie van alle deelopdrachten |
+| **MoSCoW methode** | Prioritering van verbetervoorstellen (deelopdracht 9) |
+| **Grenswaarden-analyse** | Testtechniek toegepast bij beschikbaarheidsfilter (TC-009) |
+| **Equivalentieklassen** | Testtechniek toegepast bij authenticatietesten (TC-001 t/m TC-003) |
+| **Claude Code** | AI-assistent gebruikt als coach bij het opstellen van documentatie en testcases |
 
 ---
 
