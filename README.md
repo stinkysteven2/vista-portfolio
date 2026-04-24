@@ -31,7 +31,7 @@ Na het voltooien van deze module ben ik in staat om:
 
 | Map / Bestand | Beschrijving |
 |---|---|
-| `uitwerking/deelopdracht-1-eerste-test.md` | Eerste test van het IT Talenten Portaal |
+| `uitwerking/deelopdracht-1-eerste-test/` | Eerste test van het IT Talenten Portaal |
 | `uitwerking/deelopdracht-2-srs/` | Software Requirement Specification |
 | `uitwerking/deelopdracht-3-niet-functionele-eisen/` | Functionele en niet-functionele eisen |
 | `uitwerking/deelopdracht-4-ai-en-testcases/` | Testcases opgesteld met AI |
