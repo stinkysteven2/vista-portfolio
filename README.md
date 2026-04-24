@@ -8,6 +8,12 @@ Deze module leert de fundamenten van software testen en het maken van profession
 
 Als praktijkvoorbeeld wordt de website **IT Showcase** ([itshowcase.mbogodigital.nl](https://itshowcase.mbogodigital.nl/)) gebruikt, zodat er direct ervaring wordt opgedaan met het testen van een echte applicatie.
 
+## Voor de examinator
+
+Dit portfolio is opgeleverd als een Git repository. Dat is misschien niet wat u gewend bent, maar het heeft een voordeel: via de commit-geschiedenis is mijn hele werkproces inzichtelijk — wat ik wanneer heb gemaakt, hoe documenten zich hebben ontwikkeld, en welke keuzes ik onderweg heb gemaakt.
+
+De meest relevante inhoud voor de beoordeling staat in de map `uitwerking/`. Elke deelopdracht heeft daar een eigen submap met de bijbehorende documenten.
+
 ## Te testen applicatie
 
 De applicatie die getest wordt is het **IT Talenten Portaal** ([it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent](https://it-talenten-portaal-test-it-talenten-webapp-test.iapmkw.easypanel.host/talent)). In Nederland zijn veel talenten met passie voor IT. Professionals die voortdurend bijleren en zich aanpassen aan nieuwe technologieën en ontwikkelingen. Ontdek daarom hun talenten op dit portaal, dat speciaal voor deze techneuten is ontworpen.
