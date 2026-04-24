@@ -25,7 +25,15 @@ Na het voltooien van deze module ben ik in staat om:
 
 | Map / Bestand | Beschrijving |
 |---|---|
-| _(wordt aangevuld)_ | _(wordt aangevuld naarmate de module vordert)_ |
+| `uitwerking/deelopdracht-1-eerste-test.md` | Eerste test van het IT Talenten Portaal |
+| `uitwerking/deelopdracht-2-srs/` | Software Requirement Specification |
+| `uitwerking/deelopdracht-3-niet-functionele-eisen/` | Functionele en niet-functionele eisen |
+| `uitwerking/deelopdracht-4-ai-en-testcases/` | Testcases opgesteld met AI |
+| `uitwerking/deelopdracht-5-scope/` | Scope van het testen |
+| `uitwerking/deelopdracht-6-testplan/` | Testplan |
+| `uitwerking/deelopdracht-7-testrapportage/` | Testrapport met 19 testcases en bevindingen |
+| `uitwerking/deelopdracht-8-verbetervoorstellen/` | Verbetervoorstellen op basis van testresultaten |
+| `uitwerking/deelopdracht-9-prioritiseren-verbetervoorstellen/` | MoSCoW-prioritering en sprintplanning |
 
 ## Opdrachten
 
