@@ -36,8 +36,8 @@ Na het voltooien van deze module ben ik in staat om:
 - [x] Deelopdracht 5 — Scope van het testen
 - [x] Deelopdracht 6 — Testplan
 - [x] Deelopdracht 7 — Testrapportage
-- [ ] Deelopdracht 8 — Verbetervoorstellen
-- [ ] Deelopdracht 9 — Prioritiseren verbetervoorstellen
+- [x] Deelopdracht 8 — Verbetervoorstellen
+- [x] Deelopdracht 9 — Prioritiseren verbetervoorstellen
 - [ ] Deelopdracht 10 — Communicatie verbetervoorstellen
 
 ## Gebruikte tools & technieken
