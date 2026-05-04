@@ -480,6 +480,6 @@ Geen must haves. De applicatie is klaar voor gebruik.
 
 # Vragen?
 
-Kijk op [stinkysteven2.github.io/vista-portfolio](https://stinkysteven2.github.com/vista-portfolio/)
+Kijk op [https://github.com/stinkysteven2/vista-portfolio]https://github.com/stinkysteven2/vista-portfolio/)
 of stuur ze naar
 [steven.kemp@bee-organisation.com](mailto:steven.kemp@bee-organisation.com)
