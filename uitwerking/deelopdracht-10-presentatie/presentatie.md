@@ -481,4 +481,5 @@ Geen must haves. De applicatie is klaar voor gebruik.
 # Vragen?
 
 **Steven Kemp**
-sfp.kemp@gmail.com
+steven.kemp@bee-organisation.com
+[github.com/stinkysteven2/vista-portfolio](https://github.com/stinkysteven2/vista-portfolio)
