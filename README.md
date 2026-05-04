@@ -40,6 +40,7 @@ Na het voltooien van deze module ben ik in staat om:
 | `uitwerking/deelopdracht-7-testrapportage/` | Testrapport met 19 testcases en bevindingen |
 | `uitwerking/deelopdracht-8-verbetervoorstellen/` | Verbetervoorstellen op basis van testresultaten |
 | `uitwerking/deelopdracht-9-prioritiseren-verbetervoorstellen/` | MoSCoW-prioritering en sprintplanning |
+| `uitwerking/deelopdracht-10-presentatie/` | Presentatie testproces en bevindingen (Marp) |
 
 ## Opdrachten
 
@@ -52,7 +53,7 @@ Na het voltooien van deze module ben ik in staat om:
 - [x] Deelopdracht 7 — Testrapportage
 - [x] Deelopdracht 8 — Verbetervoorstellen
 - [x] Deelopdracht 9 — Prioritiseren verbetervoorstellen
-- [ ] Deelopdracht 10 — Communicatie verbetervoorstellen
+- [x] Deelopdracht 10 — Communicatie verbetervoorstellen
 
 ## Gebruikte tools & technieken
 
@@ -68,6 +69,7 @@ Na het voltooien van deze module ben ik in staat om:
 | **Grenswaarden-analyse** | Testtechniek toegepast bij beschikbaarheidsfilter (TC-009) |
 | **Equivalentieklassen** | Testtechniek toegepast bij authenticatietesten (TC-001 t/m TC-003) |
 | **Claude Code** | AI-assistent gebruikt als coach bij het opstellen van documentatie en testcases |
+| **Marp** | Presentatie gemaakt als Markdown-bestand, gerenderd als slideshow (deelopdracht 10) |
 
 ---
 
