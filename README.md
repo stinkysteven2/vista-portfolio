@@ -8,6 +8,11 @@ Deze module leert de fundamenten van software testen en het maken van profession
 
 Als praktijkvoorbeeld wordt de website **IT Showcase** ([itshowcase.mbogodigital.nl](https://itshowcase.mbogodigital.nl/)) gebruikt, zodat er direct ervaring wordt opgedaan met het testen van een echte applicatie.
 
+## Presentatie
+
+De afsluitende presentatie (deelopdracht 10) is online te bekijken via GitHub Pages:
+[stinkysteven2.github.io/vista-portfolio](https://stinkysteven2.github.io/vista-portfolio/)
+
 ## Voor de examinator
 
 Dit portfolio is opgeleverd als een Git repository. Dat is misschien niet wat u gewend bent, maar het heeft een voordeel: via de commit-geschiedenis is mijn hele werkproces inzichtelijk — wat ik wanneer heb gemaakt, hoe documenten zich hebben ontwikkeld, en welke keuzes ik onderweg heb gemaakt.
