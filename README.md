@@ -70,6 +70,8 @@ Na het voltooien van deze module ben ik in staat om:
 | **Equivalentieklassen** | Testtechniek toegepast bij authenticatietesten (TC-001 t/m TC-003) |
 | **Claude Code** | AI-assistent gebruikt als coach bij het opstellen van documentatie en testcases |
 | **Marp** | Presentatie gemaakt als Markdown-bestand, gerenderd als slideshow (deelopdracht 10) |
+| **GitHub Actions** | Automatisch bouwen en publiceren van de Marp-presentatie bij elke push |
+| **GitHub Pages** | Hosting van de gegenereerde HTML-presentatie |
 
 ---
 
